@@ -1,0 +1,21 @@
+[submodule "belog"]
+	path = belog 
+	url = git@github.com:nu-art/belog.git 
+	branch =  master 
+[submodule "cyborg-core"]
+	path = cyborg-core 
+	url = git@github.com:nu-art/cyborg-core.git 
+	branch =  master 
+[submodule "module-manager"]
+	path = module-manager 
+	url = git@github.com:nu-art/module-manager.git 
+	branch =  master 
+[submodule "nu-art-core"]
+	path = nu-art-core 
+	url = git@github.com:nu-art/nu-art-core.git 
+	branch =  master 
+[submodule "reflection"]
+	path = reflection 
+	url = git@github.com:nu-art/reflection.git 
+	branch =  master 
+

@@ -1,0 +1,26 @@
+include ':hello-world'
+project(':hello-world').projectDir = new File(settingsDir, './tutorials/001-hello-world/hello-world')
+
+include ':controller-communication'
+project(':controller-communication').projectDir = new File(settingsDir, './tutorials/002-controller-communication/controller-communication')
+
+include ':module-basics'
+project(':module-basics').projectDir = new File(settingsDir, './tutorials/003-module-basics/module-basics')
+
+include ':module-communication'
+project(':module-communication').projectDir = new File(settingsDir, './tutorials/004-module-communication/module-communication')
+
+include ':login-module'
+project(':login-module').projectDir = new File(settingsDir, './tutorials/004-module-communication/login-module')
+
+include ':shared-preferences'
+project(':shared-preferences').projectDir = new File(settingsDir, './tutorials/005-shared-preferences/shared-preferences')
+
+include ':notifications-api'
+project(':notifications-api').projectDir = new File(settingsDir, './tutorials/006-notifications-api/notifications-api')
+
+include ':recycler'
+project(':recycler').projectDir = new File(settingsDir, './tutorials/007-recycler/recycler')
+
+include ':custom-attributes'
+project(':custom-attributes').projectDir = new File(settingsDir, './tutorials/008-custom-attributes/custom-attributes')
