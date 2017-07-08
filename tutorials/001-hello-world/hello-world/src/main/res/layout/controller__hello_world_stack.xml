@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:cyborg="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:background="@android:color/darker_gray">
+
+    <com.nu.art.cyborg.core.CyborgView
+        android:id="@+id/Tag_RootStack"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+
+        cyborg:controller="com.nu.art.cyborg.core.CyborgStackController"
+
+        cyborg:rootController="com.nu.art.cyborg.tutorial.helloWorld.Controller_HelloWorld"
+        cyborg:rootTag="HelloWorld"
+
+        cyborg:transition="Fade"
+        cyborg:transitionDuration="400"
+
+        tools:background="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/TV_AddSecondLayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="20sp"
+        android:text="CLICK ME"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"/>
+</LinearLayout>

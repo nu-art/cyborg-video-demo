@@ -19,6 +19,6 @@ android {
 }
 
 dependencies {
-    compile 'com.nu-art-software.cyborg:cyborg-core:0.8.1'
+    compile "com.nu-art-software.cyborg:cyborg-core:${cyborgVersion}"
     compile project(':login-module')
 }
