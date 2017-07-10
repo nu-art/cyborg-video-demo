@@ -31,7 +31,7 @@ public class Controller_HelloWorldStack
 	@Override
 	public void onClick(View v) {
 		CyborgStackController stackController = getControllerById(R.id.Tag_RootStack);
-		PredefinedStackTransitionAnimator animation = new PredefinedStackTransitionAnimator(getActivity(), PredefinedTransitions.Slide , BaseTransition.ORIENTATION_HORIZONTAL);
+		PredefinedStackTransitionAnimator animation = new PredefinedStackTransitionAnimator(getActivity(), PredefinedTransitions.Slide, BaseTransition.ORIENTATION_HORIZONTAL);
 		stackController.createLayerBuilder().setControllerType(Controller_HelloWorld2.class).setStackTransitionAnimators(animation).setDuration(600).build();
 	}
 }
