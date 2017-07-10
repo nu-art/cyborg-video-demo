@@ -1,6 +1,6 @@
 # cyborg-video-demo
 
-Cyborg demo projects that corrospond with the tutorials on YouTube.
+Cyborg demo projects that correspond with the tutorials on YouTube.
 
 Link to the playlist will be available shortly.
 
