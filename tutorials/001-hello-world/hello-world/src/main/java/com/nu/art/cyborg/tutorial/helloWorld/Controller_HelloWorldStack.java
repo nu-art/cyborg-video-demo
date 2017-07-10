@@ -20,12 +20,20 @@ public class Controller_HelloWorldStack
 
 	@ViewIdentifier(viewId = R.id.TV_AddSecondLayer,
 									listeners = {
-											ViewListener.OnClick
+											ViewListener.OnClick,
+											ViewListener.OnLongClick
 									})
 	TextView helloWorldTextView;
 
 	public Controller_HelloWorldStack() {
 		super(R.layout.controller__hello_world_stack);
+	}
+
+	@Override
+	public boolean onLongClick(View v) {
+		CyborgStackController stackController = getControllerById(R.id.Tag_RootStack);
+		stackController.createLayerBuilder().setControllerType(Controller_HelloWorld2.class).setDuration(2000).build();
+		return true;
 	}
 
 	@Override
