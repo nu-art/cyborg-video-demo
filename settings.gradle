@@ -22,5 +22,8 @@ project(':notifications-api').projectDir = new File(settingsDir, './tutorials/00
 include ':recycler'
 project(':recycler').projectDir = new File(settingsDir, './tutorials/007-recycler/recycler')
 
+include ':viewPager'
+project(':viewPager').projectDir = new File(settingsDir, './tutorials/007-view-pager/viewPager')
+
 include ':custom-attributes'
 project(':custom-attributes').projectDir = new File(settingsDir, './tutorials/008-custom-attributes/custom-attributes')
