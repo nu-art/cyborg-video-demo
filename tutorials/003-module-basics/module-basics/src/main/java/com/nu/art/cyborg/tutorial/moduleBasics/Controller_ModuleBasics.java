@@ -1,7 +1,6 @@
 package com.nu.art.cyborg.tutorial.moduleBasics;
 
 import com.nu.art.cyborg.core.CyborgController;
-import com.nu.art.cyborg_video_demo.R;
 
 /**
  * Created by TacB0sS on 12-May 2017.

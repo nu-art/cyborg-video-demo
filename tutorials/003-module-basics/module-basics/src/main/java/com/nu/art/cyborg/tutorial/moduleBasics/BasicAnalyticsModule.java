@@ -17,7 +17,7 @@ public class BasicAnalyticsModule
 
 	@Override
 	protected void init() {
-		Context c = getApplication();
+		Context c = getApplicationContext();
 		BasicAnalyticsModule analyticsModuleFromInfra = getModule(BasicAnalyticsModule.class);
 		String isThisTheSameInstance = analyticsModuleFromInfra == this ? "same" : "different";
 		logInfo("isThisTheSameInstance: " + isThisTheSameInstance);

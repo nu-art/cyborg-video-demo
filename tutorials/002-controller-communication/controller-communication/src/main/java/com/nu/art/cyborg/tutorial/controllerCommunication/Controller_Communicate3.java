@@ -7,8 +7,6 @@ import com.nu.art.core.generics.Processor;
 import com.nu.art.cyborg.annotations.ViewIdentifier;
 import com.nu.art.cyborg.common.consts.ViewListener;
 import com.nu.art.cyborg.core.CyborgController;
-import com.nu.art.cyborg.tutorial.controllerCommunication.Controller_Communicate2.OnClickedController2;
-import com.nu.art.cyborg_video_demo.R;
 
 /**
  * Created by TacB0sS on 12-May 2017.
