@@ -1,0 +1,32 @@
+<manifest package="com.nu.art.cyborg.tutorial.disableDefaultActivity"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:name=".Application_DisableDefaultActivity"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true">
+
+        <activity
+            android:name="com.nu.art.cyborg.ui.ApplicationLauncher"
+            android:enabled="false"/>
+
+        <activity
+            android:name=".ActivityForResult">
+
+            <!-- While I had to re-re-re-re-remember the following syntax, I was overwhelmed with satisfaction that I DON'T NEED TO USE IT ANYMORE!!  -->
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </activity>
+
+    </application>
+
+</manifest>

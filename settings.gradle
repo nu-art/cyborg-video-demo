@@ -27,3 +27,9 @@ project(':viewPager').projectDir = new File(settingsDir, './tutorials/007-view-p
 
 include ':custom-attributes'
 project(':custom-attributes').projectDir = new File(settingsDir, './tutorials/008-custom-attributes/custom-attributes')
+
+include ':common-use-cases'
+project(':common-use-cases').projectDir = new File(settingsDir, './tutorials/009-common-use-cases/common-use-cases')
+
+include ':disable-default-launcher'
+project(':disable-default-launcher').projectDir = new File(settingsDir, './tutorials/009-common-use-cases/disable-default-launcher')
