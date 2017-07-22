@@ -4,6 +4,5 @@
 /build
 /captures
 /.idea
-gradle
 *.iml
 target

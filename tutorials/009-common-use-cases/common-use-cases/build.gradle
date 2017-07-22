@@ -19,5 +19,6 @@ android {
 }
 
 dependencies {
-    compile "com.nu-art-software.cyborg:cyborg-core:${cyborgVersion}"
+    compile project(':cyborg-core')
+//    compile "com.nu-art-software.cyborg:cyborg-core:${cyborgVersion}"
 }
