@@ -13,15 +13,15 @@ import com.nu.art.cyborg.core.CyborgController;
  */
 
 public class Controller_Communicate2
-		extends CyborgController
-		implements OnClickedController1, OnClickedController3 {
+	extends CyborgController
+	implements OnClickedController1, OnClickedController3 {
 
 	// Inject view and set an OnLongClickListener and an OnClickListener.
 	@ViewIdentifier(viewId = R.id.TV_Communicate,
-									listeners = {
-											ViewListener.OnLongClick,
-											ViewListener.OnClick
-									})
+	                listeners = {
+		                ViewListener.OnLongClick,
+		                ViewListener.OnClick
+	                })
 	TextView textView;
 
 	public Controller_Communicate2() {
@@ -36,7 +36,7 @@ public class Controller_Communicate2
 
 	@Override
 	public void onClick(View v) {
-		dispatchEvent("controller 2 clicked", OnClickedController2.class, new Processor<OnClickedController2>() {
+		dispatchEvent("controller 2 clicked", new Processor<OnClickedController2>() {
 			@Override
 			public void process(OnClickedController2 listener) {
 				listener.onClickController2();

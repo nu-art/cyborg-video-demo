@@ -1,23 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    apply from: cyborgAppConfig
+
     defaultConfig {
         applicationId "com.nu.art.cyborg.tutorial_005.sharedPreferences"
-        minSdkVersion 14
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+
+    defineDefaultVariantsAPK("shared-preferences")
 }
 
 dependencies {
-    compile "com.nu-art-software.cyborg:cyborg-core:${cyborgVersion}"
+    implementation "com.nu-art-software.cyborg:cyborg-core:${cyborgVersion}"
 }

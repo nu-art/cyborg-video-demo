@@ -12,22 +12,22 @@ import com.nu.art.core.generics.Processor;
 import com.nu.art.cyborg.core.ActivityStack.ActivityStackAction;
 import com.nu.art.cyborg.core.CyborgActivityBridge;
 import com.nu.art.cyborg.core.CyborgModule;
-import com.nu.art.cyborg.core.interfaces.OnSystemPermissionsResultListener;
 import com.nu.art.cyborg.core.modules.PreferencesModule;
 import com.nu.art.cyborg.core.modules.PreferencesModule.StringPreference;
 import com.nu.art.cyborg.modules.PermissionModule;
+import com.nu.art.cyborg.modules.PermissionModule.PermissionResultListener;
 
 /**
  * Created by TacB0sS on 15-Jul 2017.
  */
 
 public class Module_CommonUseCase
-		extends CyborgModule
-		implements OnActivityResultListener, OnSystemPermissionsResultListener {
+	extends CyborgModule
+	implements OnActivityResultListener, PermissionResultListener {
 
 	private static final String[] permissions = {
-			permission.CAMERA,
-			permission.READ_CONTACTS
+		permission.CAMERA,
+		permission.READ_CONTACTS
 	};
 
 	private static final int RequestCode = 30405;
@@ -81,7 +81,7 @@ public class Module_CommonUseCase
 		if (resultCode == Activity.RESULT_OK) {
 			String result = data.getStringExtra("result");
 			resultPreferences.set(result);
-			dispatchEvent("Got Activity Result: " + result, GotActivityResultListener.class, new Processor<GotActivityResultListener>() {
+			dispatchEvent("Got Activity Result: " + result, new Processor<GotActivityResultListener>() {
 				@Override
 				public void process(GotActivityResultListener listener) {
 					listener.onGotActivityResult();
@@ -93,18 +93,21 @@ public class Module_CommonUseCase
 	}
 
 	@Override
-	public boolean onPermissionsResult(int requestCode, String[] strings, int[] ints) {
-		if (requestCode != RequestCode)
-			return false;
+	public void onPermissionsRejected(int i, String[] strings) {
+		logError("permissions rejected: " + strings.toString());
+	}
 
-		dispatchEvent("Got Permissions result", GotPermissionsResultListener.class, new Processor<GotPermissionsResultListener>() {
+	@Override
+	public void onAllPermissionsGranted(int requestCode) {
+		if (requestCode != RequestCode)
+			return;
+
+		dispatchEvent("Got Permissions result", new Processor<GotPermissionsResultListener>() {
 			@Override
 			public void process(GotPermissionsResultListener listener) {
 				listener.onGotPermissionsResult();
 			}
 		});
-
-		return true;
 	}
 
 	public interface GotActivityResultListener {

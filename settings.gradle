@@ -20,10 +20,10 @@ include ':notifications-api'
 project(':notifications-api').projectDir = new File(settingsDir, './tutorials/006-notifications-api/notifications-api')
 
 include ':recycler'
-project(':recycler').projectDir = new File(settingsDir, './tutorials/007-recycler/recycler')
+project(':recycler').projectDir = new File(settingsDir, './tutorials/007-adapter-based-views/recycler')
 
-include ':viewPager'
-project(':viewPager').projectDir = new File(settingsDir, './tutorials/007-view-pager/viewPager')
+include ':view-pager'
+project(':view-pager').projectDir = new File(settingsDir, './tutorials/007-adapter-based-views/view-pager')
 
 include ':custom-attributes'
 project(':custom-attributes').projectDir = new File(settingsDir, './tutorials/008-custom-attributes/custom-attributes')

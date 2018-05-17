@@ -5,7 +5,6 @@ import com.nu.art.cyborg.core.CyborgModule;
 import com.nu.art.cyborg.core.modules.PreferencesModule;
 import com.nu.art.cyborg.core.modules.PreferencesModule.BooleanPreference;
 import com.nu.art.cyborg.core.modules.PreferencesModule.IntegerPreference;
-import com.nu.art.cyborg.core.modules.PreferencesModule.PreferencesStorage;
 import com.nu.art.cyborg.core.modules.PreferencesModule.StringPreference;
 
 /**
@@ -13,7 +12,7 @@ import com.nu.art.cyborg.core.modules.PreferencesModule.StringPreference;
  */
 
 public class TestPrefsModule
-		extends CyborgModule {
+	extends CyborgModule {
 
 	private IntegerPreference integer;
 
@@ -24,20 +23,9 @@ public class TestPrefsModule
 	@Override
 	protected void init() {
 		integer = getModule(PreferencesModule.class).new IntegerPreference("integer", -10);
-		PreferencesStorage newStorage = new PreferencesStorage() {
-			@Override
-			public String getPreferencesName() {
-				return "my-new-storage";
-			}
-
-			@Override
-			public int getMode() {
-				return 0;
-			}
-		};
-		string = getModule(PreferencesModule.class).new StringPreference("string", "we have no value", newStorage);
+		string = getModule(PreferencesModule.class).new StringPreference("string", "we have no value", "my-new-storage");
 		bool = getModule(PreferencesModule.class).new BooleanPreference("bool", false, DateTimeTools.Minute);
-		getModule(PreferencesModule.class).dropPreferences(newStorage);
+		getModule(PreferencesModule.class).dropPreferences("my-new-storage");
 
 		//		string.set(30);
 	}

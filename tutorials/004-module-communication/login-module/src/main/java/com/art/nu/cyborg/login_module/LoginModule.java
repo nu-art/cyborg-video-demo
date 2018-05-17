@@ -12,7 +12,7 @@ import com.nu.art.cyborg.core.CyborgModule;
 
 @ModuleDescriptor
 public class LoginModule
-		extends CyborgModule {
+	extends CyborgModule {
 
 	public interface OnLoginModuleListener {
 
@@ -29,7 +29,7 @@ public class LoginModule
 			@Override
 			public void run() {
 				final String token = "token-" + userName + "-" + pass;
-				dispatchModuleEvent("On login completed: " + token, OnLoginModuleListener.class, new Processor<OnLoginModuleListener>() {
+				dispatchModuleEvent("On login completed: " + token, new Processor<OnLoginModuleListener>() {
 					@Override
 					public void process(OnLoginModuleListener listener) {
 						listener.onLoginCompleted(token);

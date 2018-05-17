@@ -6,7 +6,7 @@ import android.widget.TextView;
 import com.nu.art.cyborg.annotations.ViewIdentifier;
 import com.nu.art.cyborg.common.consts.ViewListener;
 import com.nu.art.cyborg.core.CyborgController;
-import com.nu.art.cyborg.notifications.NotificationsModule;
+import com.nu.art.cyborg.modules.notifications.NotificationsModule;
 import com.nu.art.cyborg.tutorial.notificationsApi.Notification_Basic.NotificationActionListener;
 
 /**

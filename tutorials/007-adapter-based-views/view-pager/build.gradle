@@ -4,10 +4,10 @@ android {
     apply from: cyborgAppConfig
 
     defaultConfig {
-        applicationId "com.nu.art.cyborg.tutorial_006.notificationsApi"
+        applicationId "com.nu.art.cyborg.tutorial_007.viewPager"
     }
 
-    defineDefaultVariantsAPK("notification-api")
+    defineDefaultVariantsAPK("view-pager")
 }
 
 dependencies {

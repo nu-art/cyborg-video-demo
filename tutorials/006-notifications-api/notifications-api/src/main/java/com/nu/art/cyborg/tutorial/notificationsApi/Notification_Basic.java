@@ -4,14 +4,14 @@ import android.os.Bundle;
 import android.support.v4.app.NotificationCompat.Builder;
 
 import com.nu.art.core.generics.Processor;
-import com.nu.art.cyborg.notifications.NotificationHandler;
+import com.nu.art.cyborg.modules.notifications.NotificationHandler;
 
 /**
  * Created by TacB0sS on 13-Jun 2017.
  */
 
 class Notification_Basic
-		extends NotificationHandler {
+	extends NotificationHandler {
 
 	interface NotificationActionListener {
 
@@ -23,7 +23,7 @@ class Notification_Basic
 	@Override
 	protected void processNotification(short notificationId, final String action, Bundle bundle) {
 		logInfo("Notification Action: " + action);
-		dispatchEvent("Notification action: " + action, NotificationActionListener.class, new Processor<NotificationActionListener>() {
+		dispatchEvent("Notification action: " + action, new Processor<NotificationActionListener>() {
 			@Override
 			public void process(NotificationActionListener listener) {
 				listener.onNotificationClicked(action);

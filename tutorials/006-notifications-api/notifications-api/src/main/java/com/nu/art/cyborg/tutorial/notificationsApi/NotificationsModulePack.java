@@ -1,6 +1,6 @@
 package com.nu.art.cyborg.tutorial.notificationsApi;
 
-import com.nu.art.cyborg.notifications.NotificationsModule;
+import com.nu.art.cyborg.modules.notifications.NotificationsModule;
 import com.nu.art.modular.core.ModulesPack;
 
 /**
