@@ -7,7 +7,7 @@ import com.nu.art.cyborg.core.CyborgController;
  */
 
 public class Controller_Preferences
-		extends CyborgController {
+	extends CyborgController {
 
 	public Controller_Preferences() {
 		super(R.layout.controller__preferences);

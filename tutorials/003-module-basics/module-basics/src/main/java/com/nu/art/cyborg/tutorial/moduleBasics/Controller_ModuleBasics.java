@@ -7,7 +7,7 @@ import com.nu.art.cyborg.core.CyborgController;
  */
 
 public class Controller_ModuleBasics
-		extends CyborgController {
+	extends CyborgController {
 
 	// Inject view and set an OnLongClickListener and an OnClickListener.
 

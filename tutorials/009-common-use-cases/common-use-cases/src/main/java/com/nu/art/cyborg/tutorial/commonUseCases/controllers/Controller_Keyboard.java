@@ -11,8 +11,8 @@ import com.nu.art.cyborg.tutorial.commonUseCases.R;
  */
 
 public class Controller_Keyboard
-		extends CyborgController
-		implements OnKeyboardVisibilityListener {
+	extends CyborgController
+	implements OnKeyboardVisibilityListener {
 
 	public Controller_Keyboard() {
 		super(R.layout.controller__keyboard);

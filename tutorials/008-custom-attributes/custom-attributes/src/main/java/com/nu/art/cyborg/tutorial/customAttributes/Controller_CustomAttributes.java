@@ -7,7 +7,7 @@ import com.nu.art.cyborg.core.CyborgController;
  */
 
 public class Controller_CustomAttributes
-		extends CyborgController {
+	extends CyborgController {
 
 	public Controller_CustomAttributes() {
 		super(R.layout.controller__custom_attributes);

@@ -8,7 +8,7 @@ import com.nu.art.cyborg.tutorial.commonUseCases.R;
  */
 
 public class Controller_BroadcastReceiver
-		extends CyborgController {
+	extends CyborgController {
 
 	public Controller_BroadcastReceiver() {
 		super(R.layout.controller__permissions);

@@ -15,5 +15,6 @@
     cyborg:rootTag="HelloWorld"
     cyborg:transition="Fade"
 
-    cyborg:transitionDuration="400"/>
+    cyborg:transitionDuration="400"
+    />
 

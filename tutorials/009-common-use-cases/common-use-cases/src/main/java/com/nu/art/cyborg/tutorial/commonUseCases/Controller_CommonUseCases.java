@@ -27,7 +27,7 @@ import com.nu.art.cyborg.tutorial.commonUseCases.controllers.Controller_SystemSe
  */
 
 public class Controller_CommonUseCases
-		extends CyborgController {
+	extends CyborgController {
 
 	enum UseCase {
 		Permissions(Controller_Permissions.class),
@@ -46,18 +46,18 @@ public class Controller_CommonUseCases
 
 	@SuppressWarnings("unchecked")
 	private Class<? extends ItemRenderer<? extends UseCase>>[] RendererTypes = new Class[]{
-			Renderer_UseCase.class,
+		Renderer_UseCase.class,
 	};
 
 	@SuppressWarnings("unchecked")
 	private Class<? extends UseCase>[] ItemTypes = new Class[]{
-			UseCase.class,
+		UseCase.class,
 	};
 
 	@ViewIdentifier(viewId = R.id.RV_Example,
-									listeners = {
-											ViewListener.OnRecyclerItemClicked,
-									})
+	                listeners = {
+		                ViewListener.OnRecyclerItemClicked,
+	                })
 	private CyborgRecycler recycler;
 
 	private DataModelGetter resolver;
@@ -100,7 +100,7 @@ public class Controller_CommonUseCases
 	}
 
 	private class DataModelGetter
-			implements Getter<DataModel<UseCase>> {
+		implements Getter<DataModel<UseCase>> {
 
 		int startingIndex = 0;
 
@@ -115,10 +115,10 @@ public class Controller_CommonUseCases
 	}
 
 	private class Renderer_UseCase
-			extends ItemRenderer<UseCase> {
+		extends ItemRenderer<UseCase> {
 
 		@ViewIdentifier(viewId = R.id.TV_Label,
-										listeners = {})
+		                listeners = {})
 		private TextView label;
 
 		Renderer_UseCase() {

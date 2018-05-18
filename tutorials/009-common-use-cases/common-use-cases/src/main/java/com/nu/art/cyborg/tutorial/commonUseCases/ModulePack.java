@@ -8,10 +8,10 @@ import com.nu.art.modular.core.ModulesPack;
 
 @SuppressWarnings("unchecked")
 public class ModulePack
-		extends ModulesPack {
+	extends ModulesPack {
 
 	private static final Class[] ModuleClasses = {
-			Module_CommonUseCase.class
+		Module_CommonUseCase.class
 	};
 
 	ModulePack() {

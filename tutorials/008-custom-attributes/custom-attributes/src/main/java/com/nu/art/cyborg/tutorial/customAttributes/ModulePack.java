@@ -10,10 +10,10 @@ import com.nu.art.modular.core.ModulesPack;
 
 @SuppressWarnings("unchecked")
 public class ModulePack
-		extends ModulesPack {
+	extends ModulesPack {
 
 	private static final Class[] ModuleClasses = {
-			AttributeModule.class
+		AttributeModule.class
 	};
 
 	ModulePack() {

@@ -9,10 +9,10 @@ import com.nu.art.modular.core.ModulesPack;
 
 @SuppressWarnings("unchecked")
 public class NotificationsModulePack
-		extends ModulesPack {
+	extends ModulesPack {
 
 	private static final Class[] ModuleClasses = {
-			NotificationsModule.class
+		NotificationsModule.class
 	};
 
 	NotificationsModulePack() {

@@ -16,7 +16,7 @@ import com.nu.art.cyborg.core.animations.transitions.BaseTransition;
  */
 
 public class Controller_HelloWorldStack
-		extends CyborgController {
+	extends CyborgController {
 
 	//	@ViewIdentifier(viewId = R.id.TV_AddSecondLayer,
 	//									listeners = {
@@ -26,13 +26,13 @@ public class Controller_HelloWorldStack
 	//	TextView helloWorldTextView;
 
 	@ViewIdentifier(viewIds = {
-			R.id.TV_AddSecondLayer1,
-			R.id.TV_AddSecondLayer2
+		R.id.TV_AddSecondLayer1,
+		R.id.TV_AddSecondLayer2
 	},
-									listeners = {
-											ViewListener.OnClick,
-											ViewListener.OnLongClick
-									})
+	                listeners = {
+		                ViewListener.OnClick,
+		                ViewListener.OnLongClick
+	                })
 	View[] clickableViews;
 
 	public Controller_HelloWorldStack() {

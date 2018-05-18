@@ -19,27 +19,27 @@ import com.nu.art.cyborg.core.dataModels.ListDataModel;
  */
 
 public class Controller_Recycler
-		extends CyborgController {
+	extends CyborgController {
 
 	@SuppressWarnings("unchecked")
 	private Class<? extends ItemRenderer<? extends Number>>[] RendererTypes = new Class[]{
-			Renderer_Integer.class,
-			Renderer_Float.class,
-			Renderer_Double.class
+		Renderer_Integer.class,
+		Renderer_Float.class,
+		Renderer_Double.class
 	};
 
 	@SuppressWarnings("unchecked")
 	private Class<? extends Number>[] ItemTypes = new Class[]{
-			Integer.class,
-			Float.class,
-			Double.class
+		Integer.class,
+		Float.class,
+		Double.class
 	};
 
 	@ViewIdentifier(viewId = R.id.RV_Example,
-									listeners = {
-											ViewListener.OnRecyclerItemClicked,
-											ViewListener.OnRecyclerItemLongClicked
-									})
+	                listeners = {
+		                ViewListener.OnRecyclerItemClicked,
+		                ViewListener.OnRecyclerItemLongClicked
+	                })
 	private CyborgRecycler recycler;
 
 	private DataModelGetter resolver;
@@ -86,7 +86,7 @@ public class Controller_Recycler
 	}
 
 	private class DataModelGetter
-			implements Getter<DataModel<Number>> {
+		implements Getter<DataModel<Number>> {
 
 		int startingIndex = 0;
 
@@ -109,10 +109,10 @@ public class Controller_Recycler
 	}
 
 	private class Renderer_Integer
-			extends ItemRenderer<Integer> {
+		extends ItemRenderer<Integer> {
 
 		@ViewIdentifier(viewId = R.id.TV_Number,
-										listeners = {})
+		                listeners = {})
 		private TextView number;
 
 		Renderer_Integer() {
@@ -126,10 +126,10 @@ public class Controller_Recycler
 	}
 
 	private class Renderer_Float
-			extends ItemRenderer<Float> {
+		extends ItemRenderer<Float> {
 
 		@ViewIdentifier(viewId = R.id.TV_Number,
-										listeners = {})
+		                listeners = {})
 		private TextView number;
 
 		Renderer_Float() {
@@ -143,10 +143,10 @@ public class Controller_Recycler
 	}
 
 	private class Renderer_Double
-			extends ItemRenderer<Double> {
+		extends ItemRenderer<Double> {
 
 		@ViewIdentifier(viewId = R.id.TV_Number,
-										listeners = {})
+		                listeners = {})
 		private TextView number;
 
 		Renderer_Double() {

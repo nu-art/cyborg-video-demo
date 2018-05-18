@@ -6,7 +6,7 @@ import com.nu.art.cyborg.core.CyborgBuilder;
 import com.nu.art.cyborg.core.CyborgBuilder.CyborgConfiguration;
 
 public class Application_SharedPreferences
-		extends Application {
+	extends Application {
 
 	@Override
 	@SuppressWarnings("unchecked")

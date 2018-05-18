@@ -21,7 +21,7 @@ import com.nu.art.reflection.annotations.ReflectiveInitialization;
  */
 
 public class CustomDottedView
-		extends View {
+	extends View {
 
 	int dotCount = 2;
 
@@ -76,12 +76,12 @@ public class CustomDottedView
 
 	@ReflectiveInitialization
 	public static class CustomDottedViewSetter
-			extends AttributesSetter<CustomDottedView> {
+		extends AttributesSetter<CustomDottedView> {
 
 		private static int[] ids = {
-				R.styleable.DottedView_dotCount,
-				R.styleable.DottedView_dotRadius,
-				R.styleable.DottedView_dotSpace,
+			R.styleable.DottedView_dotCount,
+			R.styleable.DottedView_dotRadius,
+			R.styleable.DottedView_dotSpace,
 		};
 
 		private CustomDottedViewSetter() {

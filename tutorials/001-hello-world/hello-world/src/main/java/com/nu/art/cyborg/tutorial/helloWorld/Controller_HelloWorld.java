@@ -12,14 +12,14 @@ import com.nu.art.cyborg.core.CyborgController;
  */
 
 public class Controller_HelloWorld
-		extends CyborgController {
+	extends CyborgController {
 
 	// Inject view and set an OnLongClickListener and an OnClickListener.
 	@ViewIdentifier(viewId = R.id.HelloWorld,
-									listeners = {
-											ViewListener.OnLongClick,
-											ViewListener.OnClick
-									})
+	                listeners = {
+		                ViewListener.OnLongClick,
+		                ViewListener.OnClick
+	                })
 	TextView helloWorldTextView;
 
 	public Controller_HelloWorld() {

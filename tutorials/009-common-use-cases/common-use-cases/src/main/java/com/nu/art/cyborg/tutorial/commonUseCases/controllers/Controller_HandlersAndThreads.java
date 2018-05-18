@@ -8,7 +8,7 @@ import com.nu.art.cyborg.tutorial.commonUseCases.R;
  */
 
 public class Controller_HandlersAndThreads
-		extends CyborgController {
+	extends CyborgController {
 
 	public Controller_HandlersAndThreads() {
 		super(R.layout.controller__permissions);

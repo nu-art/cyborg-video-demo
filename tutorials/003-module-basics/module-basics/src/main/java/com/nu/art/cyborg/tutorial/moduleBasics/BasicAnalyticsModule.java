@@ -11,7 +11,7 @@ import com.nu.art.cyborg.core.CyborgModule;
  */
 @ModuleDescriptor(usesPermissions = {permission.INTERNET})
 public class BasicAnalyticsModule
-		extends CyborgModule {
+	extends CyborgModule {
 
 	private String analyticsKey;
 

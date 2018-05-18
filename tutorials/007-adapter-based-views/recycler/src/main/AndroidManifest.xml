@@ -1,5 +1,7 @@
-<manifest package="com.nu.art.cyborg.tutorial.recycler"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest
+    package="com.nu.art.cyborg.tutorial.recycler"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -9,7 +11,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        >
 
     </application>
 

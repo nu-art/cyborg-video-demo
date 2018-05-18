@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
         <TextView
             android:id="@+id/TV_ShowNotification"
@@ -17,14 +20,16 @@
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
             android:padding="4dp"
-            android:text="Show notification"/>
+            android:text="Show notification"
+            />
 
         <TextView
             android:id="@+id/TV_ActionLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="No Action"/>
+            android:text="No Action"
+            />
 
     </LinearLayout>
 </RelativeLayout>

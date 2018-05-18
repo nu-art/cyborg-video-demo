@@ -15,11 +15,11 @@ import com.nu.art.cyborg.tutorial.commonUseCases.R;
  */
 
 public class Controller_Permissions
-		extends CyborgController
-		implements GotPermissionsResultListener {
+	extends CyborgController
+	implements GotPermissionsResultListener {
 
 	@ViewIdentifier(viewId = R.id.TV_Button,
-									listeners = ViewListener.OnClick)
+	                listeners = ViewListener.OnClick)
 	TextView clickHere;
 
 	public Controller_Permissions() {

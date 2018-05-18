@@ -11,7 +11,7 @@ import com.nu.art.cyborg.tutorial.commonUseCases.R;
  */
 
 public class Controller_SystemService
-		extends CyborgController {
+	extends CyborgController {
 
 	public Controller_SystemService() {
 		super(R.layout.controller__permissions);

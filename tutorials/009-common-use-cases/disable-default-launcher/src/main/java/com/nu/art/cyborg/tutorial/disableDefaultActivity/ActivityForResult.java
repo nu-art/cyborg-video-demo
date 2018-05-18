@@ -13,16 +13,16 @@ import java.util.Random;
  */
 
 public class ActivityForResult
-		extends CyborgActivity {
+	extends CyborgActivity {
 
 	private static final String[] possibleResult = {
-			"WOAH WOAH WE WAH",
-			"YAHK SHEMASH",
-			"GREEAAAT SUCCESSSS",
-			"MY A LITTLE BROTHER BILLU",
-			"YOU NEVER GET IT.. YOU NEVER GET IT...",
-			"ONE A DAY, HE GOT A..  OUT OF THE CAGE...",
-			"YOU BE MY WIFE... I TREAT YOU NICE...",
+		"WOAH WOAH WE WAH",
+		"YAHK SHEMASH",
+		"GREEAAAT SUCCESSSS",
+		"MY A LITTLE BROTHER BILLU",
+		"YOU NEVER GET IT.. YOU NEVER GET IT...",
+		"ONE A DAY, HE GOT A..  OUT OF THE CAGE...",
+		"YOU BE MY WIFE... I TREAT YOU NICE...",
 	};
 
 	private TextView label;
@@ -35,7 +35,7 @@ public class ActivityForResult
 	}
 
 	private class TimeoutRunnable
-			implements Runnable {
+		implements Runnable {
 
 		private final long startedAt;
 

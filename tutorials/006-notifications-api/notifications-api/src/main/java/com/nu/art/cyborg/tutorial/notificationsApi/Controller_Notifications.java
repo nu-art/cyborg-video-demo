@@ -14,14 +14,14 @@ import com.nu.art.cyborg.tutorial.notificationsApi.Notification_Basic.Notificati
  */
 
 public class Controller_Notifications
-		extends CyborgController
-		implements NotificationActionListener {
+	extends CyborgController
+	implements NotificationActionListener {
 
 	@ViewIdentifier(viewId = R.id.TV_ShowNotification,
-									listeners = {
-											ViewListener.OnLongClick,
-											ViewListener.OnClick
-									})
+	                listeners = {
+		                ViewListener.OnLongClick,
+		                ViewListener.OnClick
+	                })
 	TextView notificationButton;
 
 	@ViewIdentifier(viewId = R.id.TV_ActionLabel)

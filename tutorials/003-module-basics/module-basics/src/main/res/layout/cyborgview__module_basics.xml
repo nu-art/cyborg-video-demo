@@ -6,4 +6,5 @@
     android:layout_height="match_parent"
 
     cyborg:controller="com.nu.art.cyborg.tutorial.moduleBasics.Controller_ModuleBasics"
-    cyborg:tag="mytag"/>
+    cyborg:tag="mytag"
+    />

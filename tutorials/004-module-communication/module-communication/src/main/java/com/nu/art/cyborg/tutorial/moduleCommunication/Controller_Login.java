@@ -14,14 +14,14 @@ import com.nu.art.cyborg.tutorial.moduleCommunication.AppModule.OnLoginListener;
  */
 
 public class Controller_Login
-		extends CyborgController
-		implements OnLoginListener {
+	extends CyborgController
+	implements OnLoginListener {
 
 	// Inject view and set an OnLongClickListener and an OnClickListener.
 	@ViewIdentifier(viewId = R.id.LoginView,
-									listeners = {
-											ViewListener.OnClick
-									})
+	                listeners = {
+		                ViewListener.OnClick
+	                })
 	private TextView loginTextView;
 
 	public Controller_Login() {

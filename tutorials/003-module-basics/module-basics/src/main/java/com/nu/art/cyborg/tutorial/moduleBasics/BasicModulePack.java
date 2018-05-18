@@ -9,11 +9,11 @@ import com.nu.art.modular.core.ModulesPack;
 
 @SuppressWarnings("unchecked")
 public class BasicModulePack
-		extends ModulesPack {
+	extends ModulesPack {
 
 	private static final Class[] ModuleClasses = {
-			AppDetailsModule.class,
-			BasicAnalyticsModule.class,
+		AppDetailsModule.class,
+		BasicAnalyticsModule.class,
 	};
 
 	BasicModulePack() {

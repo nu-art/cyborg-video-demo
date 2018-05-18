@@ -15,11 +15,11 @@ import com.nu.art.cyborg.tutorial.commonUseCases.R;
  */
 
 public class Controller_ActivityForActivityResult
-		extends CyborgController
-		implements GotActivityResultListener {
+	extends CyborgController
+	implements GotActivityResultListener {
 
 	@ViewIdentifier(viewId = R.id.TV_Button,
-									listeners = ViewListener.OnClick)
+	                listeners = ViewListener.OnClick)
 	TextView clickHere;
 
 	@ViewIdentifier(viewId = R.id.TV_Result)
