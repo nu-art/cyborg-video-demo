@@ -1,11 +1,11 @@
-package com.nu.art.cyborg.tutorial.commonUseCases;
+package com.nu.art.cyborg.tutorial.adapterBasedViews;
 
 import android.app.Application;
 
 import com.nu.art.cyborg.core.CyborgBuilder;
 import com.nu.art.cyborg.core.CyborgBuilder.CyborgConfiguration;
 
-public class Application_CommonUseCases
+public class Application_AdapterBasedViews
 	extends Application {
 
 	@Override

@@ -1,9 +1,6 @@
-apply plugin: 'com.android.library'
-
-android {
-    apply from: cyborgLibConfig
-}
+apply from: cyborgLibConfig
 
 dependencies {
+//    implementation project(":cyborg-core")
     implementation "com.nu-art-software.cyborg:cyborg-core:${NU_ART_VERSION}"
 }

@@ -1,4 +1,4 @@
-package com.nu.art.cyborg.tutorial.commonUseCases;
+package com.nu.art.cyborg.tutorial.adapterBasedViews;
 
 import com.nu.art.cyborg.tutorial.infraExample.Module_Examples;
 import com.nu.art.modular.core.ModulesPack;
@@ -13,7 +13,6 @@ public class ModulePack
 
 	private static final Class[] ModuleClasses = {
 		Module_Examples.class,
-		Module_CommonUseCase.class
 	};
 
 	ModulePack() {

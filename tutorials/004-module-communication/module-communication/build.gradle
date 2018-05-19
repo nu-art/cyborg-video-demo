@@ -11,6 +11,6 @@ android {
 }
 
 dependencies {
-    implementation "com.nu-art-software.cyborg:cyborg-core:${cyborgVersion}"
+    implementation "com.nu-art-software.cyborg:cyborg-core:${NU_ART_VERSION}"
     implementation project(':login-module')
 }

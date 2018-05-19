@@ -19,11 +19,8 @@ project(':shared-preferences').projectDir = new File(settingsDir, './tutorials/0
 include ':notifications-api'
 project(':notifications-api').projectDir = new File(settingsDir, './tutorials/006-notifications-api/notifications-api')
 
-include ':recycler'
-project(':recycler').projectDir = new File(settingsDir, './tutorials/007-adapter-based-views/recycler')
-
-include ':view-pager'
-project(':view-pager').projectDir = new File(settingsDir, './tutorials/007-adapter-based-views/view-pager')
+include ':adapter-based-views'
+project(':adapter-based-views').projectDir = new File(settingsDir, './tutorials/007-adapter-based-views/adapter-based-views')
 
 include ':custom-attributes'
 project(':custom-attributes').projectDir = new File(settingsDir, './tutorials/008-custom-attributes/custom-attributes')
@@ -33,3 +30,6 @@ project(':common-use-cases').projectDir = new File(settingsDir, './tutorials/009
 
 include ':disable-default-launcher'
 project(':disable-default-launcher').projectDir = new File(settingsDir, './tutorials/009-common-use-cases/disable-default-launcher')
+
+include ':infra-examples'
+project(':infra-examples').projectDir = new File(settingsDir, './tutorials/999-advance-stuff/infra-examples')
