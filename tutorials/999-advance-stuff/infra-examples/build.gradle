@@ -1,6 +1,5 @@
-apply from: cyborgLibConfig
+applyAndroidLibrary()
 
 dependencies {
-//    implementation project(":cyborg-core")
     implementation "com.nu-art-software.cyborg:cyborg-core:${NU_ART_VERSION}"
 }

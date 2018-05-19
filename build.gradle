@@ -27,6 +27,7 @@ subprojects {
     }
 
 
+    apply from: path + '/dev-tools/gradle/common-cyborg.gradle'
     apply from: path + '/dev-tools/gradle/version-bump.gradle'
     apply from: path + '/dev-tools/gradle/utils.gradle'
 }

@@ -1,14 +1,4 @@
-apply plugin: 'com.android.application'
-
-android {
-    apply from: cyborgAppConfig
-
-    defaultConfig {
-        applicationId "com.nu.art.cyborg.tutorial_003.moduleBasics"
-    }
-
-    defineDefaultVariantsAPK("module-basics")
-}
+applyAndroidApplication("com.nu.art.cyborg.tutorial_003.moduleBasics", "module-basics")
 
 dependencies {
     implementation "com.nu-art-software.cyborg:cyborg-core:${NU_ART_VERSION}"

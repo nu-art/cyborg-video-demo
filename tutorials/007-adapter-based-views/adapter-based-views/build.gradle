@@ -1,14 +1,4 @@
-apply plugin: 'com.android.application'
-
-android {
-    apply from: cyborgAppConfig
-
-    defaultConfig {
-        applicationId "com.nu.art.cyborg.tutorial_007.adapterBasedViews"
-    }
-
-    defineDefaultVariantsAPK("adapter-based-views-example")
-}
+applyAndroidApplication("com.nu.art.cyborg.tutorial_007.adapterBasedViews", "adapter-based-views-example")
 
 dependencies {
     implementation "com.nu-art-software.cyborg:cyborg-core:${NU_ART_VERSION}"

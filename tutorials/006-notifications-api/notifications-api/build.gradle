@@ -1,14 +1,4 @@
-apply plugin: 'com.android.application'
-
-android {
-    apply from: cyborgAppConfig
-
-    defaultConfig {
-        applicationId "com.nu.art.cyborg.tutorial_006.notificationsApi"
-    }
-
-    defineDefaultVariantsAPK("notification-api")
-}
+applyAndroidApplication("com.nu.art.cyborg.tutorial_006.notificationsApi", "notification-api")
 
 dependencies {
     implementation "com.nu-art-software.cyborg:cyborg-core:${NU_ART_VERSION}"
