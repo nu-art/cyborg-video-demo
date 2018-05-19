@@ -21,12 +21,6 @@ allprojects {
 }
 subprojects {
     def path = rootProject.projectDir.getAbsolutePath()
-    project.ext {
-        cyborgAppConfig = path + '/dev-tools/gradle/common-cyborg-app.gradle'
-        cyborgLibConfig = path + '/dev-tools/gradle/common-cyborg-lib.gradle'
-    }
-
-
     apply from: path + '/dev-tools/gradle/common-cyborg.gradle'
     apply from: path + '/dev-tools/gradle/version-bump.gradle'
     apply from: path + '/dev-tools/gradle/utils.gradle'
