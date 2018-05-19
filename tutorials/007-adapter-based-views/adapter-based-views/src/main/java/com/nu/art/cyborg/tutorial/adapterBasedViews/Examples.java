@@ -3,6 +3,7 @@ package com.nu.art.cyborg.tutorial.adapterBasedViews;
 import com.nu.art.cyborg.core.CyborgController;
 import com.nu.art.cyborg.tutorial.adapterBasedViews.controllers.Controller_Recycler_CursorDataModel;
 import com.nu.art.cyborg.tutorial.adapterBasedViews.controllers.Controller_Recycler_ListDataModel;
+import com.nu.art.cyborg.tutorial.adapterBasedViews.controllers.Controller_Spinner;
 import com.nu.art.cyborg.tutorial.adapterBasedViews.controllers.Controller_ViewPager;
 import com.nu.art.cyborg.tutorial.infraExample.Module_Examples.UseCaseExample;
 
@@ -10,6 +11,7 @@ enum Examples
 	implements UseCaseExample {
 	CursorDataModel(Controller_Recycler_CursorDataModel.class),
 	ListDataModel(Controller_Recycler_ListDataModel.class),
+	Spinner(Controller_Spinner.class),
 	ViewPager(Controller_ViewPager.class),
 	//
 	;

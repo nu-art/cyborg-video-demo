@@ -1,3 +1,7 @@
+apply from: './dev-tools/gradle/utils.gradle'
+
+includeIfExists('cyborg-core')
+
 include ':hello-world'
 project(':hello-world').projectDir = new File(settingsDir, './tutorials/001-hello-world/hello-world')
 

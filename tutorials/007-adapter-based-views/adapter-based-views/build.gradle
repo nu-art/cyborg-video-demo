@@ -1,6 +1,6 @@
 applyAndroidApplication("com.nu.art.cyborg.tutorial_007.adapterBasedViews", "adapter-based-views-example")
 
 dependencies {
-    implementation "com.nu-art-software.cyborg:cyborg-core:${NU_ART_VERSION}"
+    implementation(resolveDependency('cyborg-core', 'com.nu-art-software.cyborg', "${NU_ART_VERSION}"))
     implementation project(":infra-examples")
 }

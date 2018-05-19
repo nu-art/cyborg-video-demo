@@ -19,6 +19,7 @@ allprojects {
         google()
     }
 }
+
 subprojects {
     def path = rootProject.projectDir.getAbsolutePath()
     apply from: path + '/dev-tools/gradle/common-cyborg.gradle'

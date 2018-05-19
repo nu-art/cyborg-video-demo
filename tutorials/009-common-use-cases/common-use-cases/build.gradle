@@ -1,6 +1,6 @@
 applyAndroidApplication("com.nu.art.cyborg.tutorial_009.commonUseCases", "common-use-cases")
 
 dependencies {
-    implementation "com.nu-art-software.cyborg:cyborg-core:${NU_ART_VERSION}"
+    implementation(resolveDependency('cyborg-core', 'com.nu-art-software.cyborg', "${NU_ART_VERSION}"))
     implementation project(":infra-examples")
 }

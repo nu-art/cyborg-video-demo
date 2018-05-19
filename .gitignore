@@ -2,6 +2,7 @@
 /local.properties
 .DS_Store
 /build
+/cyborg-core
 /captures
 /.idea
 *.iml
