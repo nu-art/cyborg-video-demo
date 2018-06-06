@@ -35,5 +35,8 @@ project(':common-use-cases').projectDir = new File(settingsDir, './tutorials/009
 include ':disable-default-launcher'
 project(':disable-default-launcher').projectDir = new File(settingsDir, './tutorials/009-common-use-cases/disable-default-launcher')
 
+include ':google-maps'
+project(':google-maps').projectDir = new File(settingsDir, './tutorials/050-google-maps/google-maps')
+
 include ':infra-examples'
 project(':infra-examples').projectDir = new File(settingsDir, './tutorials/999-advance-stuff/infra-examples')
