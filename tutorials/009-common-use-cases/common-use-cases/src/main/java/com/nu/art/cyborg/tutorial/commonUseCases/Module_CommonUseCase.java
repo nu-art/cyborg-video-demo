@@ -12,10 +12,9 @@ import com.nu.art.core.generics.Processor;
 import com.nu.art.cyborg.core.ActivityStack.ActivityStackAction;
 import com.nu.art.cyborg.core.CyborgActivityBridge;
 import com.nu.art.cyborg.core.CyborgModule;
-import com.nu.art.cyborg.core.modules.PreferencesModule;
-import com.nu.art.cyborg.core.modules.PreferencesModule.StringPreference;
 import com.nu.art.cyborg.modules.PermissionModule;
 import com.nu.art.cyborg.modules.PermissionModule.PermissionResultListener;
+import com.nu.art.storage.StringPreference;
 
 /**
  * Created by TacB0sS on 15-Jul 2017.
@@ -32,11 +31,11 @@ public class Module_CommonUseCase
 
 	private static final int RequestCode = 30405;
 
-	private StringPreference resultPreferences;
+	private StringPreference resultPreferences = new StringPreference("activityResult", "No Result");
 
 	@Override
 	protected void init() {
-		resultPreferences = getModule(PreferencesModule.class).new StringPreference("activityResult", "No Result");
+
 	}
 
 	public final void askPermissions() {
@@ -81,7 +80,7 @@ public class Module_CommonUseCase
 		if (resultCode == Activity.RESULT_OK) {
 			String result = data.getStringExtra("result");
 			resultPreferences.set(result);
-			dispatchEvent("Got Activity Result: " + result, new Processor<GotActivityResultListener>() {
+			dispatchEvent("Got Activity Result: " + result, GotActivityResultListener.class, new Processor<GotActivityResultListener>() {
 				@Override
 				public void process(GotActivityResultListener listener) {
 					listener.onGotActivityResult();
@@ -102,7 +101,7 @@ public class Module_CommonUseCase
 		if (requestCode != RequestCode)
 			return;
 
-		dispatchEvent("Got Permissions result", new Processor<GotPermissionsResultListener>() {
+		dispatchEvent("Got Permissions result", GotPermissionsResultListener.class, new Processor<GotPermissionsResultListener>() {
 			@Override
 			public void process(GotPermissionsResultListener listener) {
 				listener.onGotPermissionsResult();

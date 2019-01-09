@@ -36,7 +36,7 @@ public class Controller_Communicate2
 
 	@Override
 	public void onClick(View v) {
-		dispatchEvent("controller 2 clicked", new Processor<OnClickedController2>() {
+		dispatchEvent("controller 2 clicked", OnClickedController2.class, new Processor<OnClickedController2>() {
 			@Override
 			public void process(OnClickedController2 listener) {
 				listener.onClickController2();

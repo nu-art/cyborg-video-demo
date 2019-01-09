@@ -34,7 +34,7 @@ public class AppModule
 		logInfo("login completed");
 		this.token = token;
 
-		dispatchEvent("login completed", new Processor<OnLoginListener>() {
+		dispatchEvent("login completed", OnLoginListener.class, new Processor<OnLoginListener>() {
 			@Override
 			public void process(OnLoginListener listener) {
 				listener.onLoginCompleted();
