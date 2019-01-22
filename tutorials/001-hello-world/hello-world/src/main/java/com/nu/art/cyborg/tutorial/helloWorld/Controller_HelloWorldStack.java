@@ -1,15 +1,20 @@
 package com.nu.art.cyborg.tutorial.helloWorld;
 
+import android.graphics.Color;
 import android.view.View;
 
 import com.nu.art.core.exceptions.runtime.ImplementationMissingException;
+import com.nu.art.core.generics.Processor;
 import com.nu.art.cyborg.annotations.ViewIdentifier;
 import com.nu.art.cyborg.common.consts.ViewListener;
 import com.nu.art.cyborg.core.CyborgController;
 import com.nu.art.cyborg.core.CyborgStackController;
+import com.nu.art.cyborg.core.CyborgStackController.StackTransitionAnimator;
 import com.nu.art.cyborg.core.animations.PredefinedStackTransitionAnimator;
 import com.nu.art.cyborg.core.animations.PredefinedTransitions;
 import com.nu.art.cyborg.core.animations.transitions.BaseTransition;
+
+import java.util.Random;
 
 /**
  * Created by TacB0sS on 06-Jul 2017.
@@ -48,14 +53,14 @@ public class Controller_HelloWorldStack
 
 	@Override
 	public void onClick(View v) {
-		PredefinedStackTransitionAnimator animation;
+		StackTransitionAnimator animation;
 		switch (v.getId()) {
 			case R.id.TV_AddSecondLayer1:
-				animation = new PredefinedStackTransitionAnimator(getActivity(), PredefinedTransitions.Slide, BaseTransition.ORIENTATION_HORIZONTAL);
+				animation = createLayerTransition(PredefinedTransitions.Slide, BaseTransition.ORIENTATION_HORIZONTAL);
 				break;
 
 			case R.id.TV_AddSecondLayer2:
-				animation = new PredefinedStackTransitionAnimator(getActivity(), PredefinedTransitions.Slide, BaseTransition.ORIENTATION_VERTICAL);
+				animation = createLayerTransition(PredefinedTransitions.Slide, BaseTransition.ORIENTATION_VERTICAL);
 				break;
 
 			default:
@@ -63,6 +68,16 @@ public class Controller_HelloWorldStack
 		}
 
 		CyborgStackController stackController = getControllerById(R.id.Tag_RootStack);
-		stackController.createLayerBuilder().setControllerType(Controller_HelloWorld2.class).setStackTransitionAnimators(animation).setDuration(600).build();
+		stackController.createLayerBuilder()
+		               .setControllerType(Controller_HelloWorld2.class)
+		               .setStackTransitionAnimators(animation)
+		               .setDuration(600)
+		               .setProcessor(new Processor<Controller_HelloWorld2>() {
+			               @Override
+			               public void process(Controller_HelloWorld2 controller_helloWorld2) {
+				               controller_helloWorld2.getRootView().setBackgroundColor(Color.argb(255, UtilsRandom.nextInt(256), UtilsRandom.nextInt(256), UtilsRandom.nextInt(256)));
+			               }
+		               })
+		               .build();
 	}
 }

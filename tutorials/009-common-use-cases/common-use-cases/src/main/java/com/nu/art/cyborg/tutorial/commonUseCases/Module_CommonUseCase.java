@@ -1,6 +1,5 @@
 package com.nu.art.cyborg.tutorial.commonUseCases;
 
-import android.Manifest.permission;
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -12,8 +11,6 @@ import com.nu.art.core.generics.Processor;
 import com.nu.art.cyborg.core.ActivityStack.ActivityStackAction;
 import com.nu.art.cyborg.core.CyborgActivityBridge;
 import com.nu.art.cyborg.core.CyborgModule;
-import com.nu.art.cyborg.modules.PermissionModule;
-import com.nu.art.cyborg.modules.PermissionModule.PermissionResultListener;
 import com.nu.art.storage.StringPreference;
 
 /**
@@ -22,12 +19,7 @@ import com.nu.art.storage.StringPreference;
 
 public class Module_CommonUseCase
 	extends CyborgModule
-	implements OnActivityResultListener, PermissionResultListener {
-
-	private static final String[] permissions = {
-		permission.CAMERA,
-		permission.READ_CONTACTS
-	};
+	implements OnActivityResultListener {
 
 	private static final int RequestCode = 30405;
 
@@ -39,11 +31,6 @@ public class Module_CommonUseCase
 	}
 
 	public final void askPermissions() {
-		getModule(PermissionModule.class).requestPermission(RequestCode, permissions);
-	}
-
-	public final String[] getRejectedPermissions() {
-		return getModule(PermissionModule.class).getRejectedPermissions(permissions);
 	}
 
 	public final WifiInfo doSomethingWithTheWifiManager() {
@@ -91,31 +78,8 @@ public class Module_CommonUseCase
 		return true;
 	}
 
-	@Override
-	public void onPermissionsRejected(int i, String[] strings) {
-		logError("permissions rejected: " + strings.toString());
-	}
-
-	@Override
-	public void onAllPermissionsGranted(int requestCode) {
-		if (requestCode != RequestCode)
-			return;
-
-		dispatchEvent("Got Permissions result", GotPermissionsResultListener.class, new Processor<GotPermissionsResultListener>() {
-			@Override
-			public void process(GotPermissionsResultListener listener) {
-				listener.onGotPermissionsResult();
-			}
-		});
-	}
-
 	public interface GotActivityResultListener {
 
 		void onGotActivityResult();
-	}
-
-	public interface GotPermissionsResultListener {
-
-		void onGotPermissionsResult();
 	}
 }

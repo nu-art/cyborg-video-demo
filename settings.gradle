@@ -32,6 +32,9 @@ project(':custom-attributes').projectDir = new File(settingsDir, './tutorials/00
 include ':common-use-cases'
 project(':common-use-cases').projectDir = new File(settingsDir, './tutorials/009-common-use-cases/common-use-cases')
 
+include ':tool-bar'
+project(':tool-bar').projectDir = new File(settingsDir, './tutorials/009-common-use-cases/tool-bar')
+
 include ':disable-default-launcher'
 project(':disable-default-launcher').projectDir = new File(settingsDir, './tutorials/009-common-use-cases/disable-default-launcher')
 

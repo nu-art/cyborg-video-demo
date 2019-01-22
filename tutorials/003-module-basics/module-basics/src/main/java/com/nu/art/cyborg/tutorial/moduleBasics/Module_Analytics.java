@@ -9,21 +9,32 @@ import com.nu.art.cyborg.core.CyborgModule;
 /**
  * Created by TacB0sS on 15-May 2017.
  */
+
+// EXTREMELY SIMPLIFIED
 @ModuleDescriptor(usesPermissions = {permission.INTERNET})
-public class BasicAnalyticsModule
+public class Module_Analytics
 	extends CyborgModule {
 
 	private String analyticsKey;
 
+	private Module_Analytics() {}
+
 	@Override
 	protected void init() {
 		Context c = getApplicationContext();
-		BasicAnalyticsModule analyticsModuleFromInfra = getModule(BasicAnalyticsModule.class);
-		String isThisTheSameInstance = analyticsModuleFromInfra == this ? "same" : "different";
+		Module_Analytics module = getModule(Module_Analytics.class);
+		String isThisTheSameInstance = module == this ? "same" : "different";
 		logInfo("isThisTheSameInstance: " + isThisTheSameInstance);
 	}
 
+	// We need the analytics key to configure the sdk
 	void setAnalyticsKey(String analyticsKey) {
 		this.analyticsKey = analyticsKey;
+	}
+
+	// EXTREMELY SIMPLIFIED
+	public final void sendEvent(String event) {
+		logDebug("sending event: " + event);
+		// here we can call any service/s we'd like to publish our event to.
 	}
 }

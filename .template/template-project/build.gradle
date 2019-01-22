@@ -1,0 +1,5 @@
+applyAndroidApplication("PLACEHOLDER_PACKAGE_NAME", "PLACEHOLDER_TUTORIAL_NAME")
+
+dependencies {
+    implementation(resolveDependency('cyborg-core', 'com.nu-art-software.cyborg', "${NU_ART_VERSION}"))
+}

@@ -8,21 +8,24 @@ import com.nu.art.modular.core.ModulesPack;
  */
 
 @SuppressWarnings("unchecked")
-public class BasicModulePack
+public class ModulePack_Basics
 	extends ModulesPack {
 
+	// This is convenient way to set the list of modules in the ModulesPack
 	private static final Class[] ModuleClasses = {
 		AppDetailsModule.class,
-		BasicAnalyticsModule.class,
+		Module_Analytics.class,
+		// NOTE this comma    ^    it is here for git merge reasons
 	};
 
-	BasicModulePack() {
+	ModulePack_Basics() {
 		super(ModuleClasses);
 	}
 
+	// Here we can configure ONLY the modules declared by this ModulesPack
 	@Override
 	protected void init() {
 		boolean debug = getModule(AppDetailsModule.class).isDebug();
-		getModule(BasicAnalyticsModule.class).setAnalyticsKey(debug ? "debug" : "production");
+		getModule(Module_Analytics.class).setAnalyticsKey(debug ? "debug" : "production");
 	}
 }
