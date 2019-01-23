@@ -6,7 +6,7 @@ include ':hello-world'
 project(':hello-world').projectDir = new File(settingsDir, './tutorials/001-hello-world/hello-world')
 
 include ':controller-communication'
-project(':controller-communication').projectDir = new File(settingsDir, './tutorials/002-controller-communication/controller-communication')
+project(':controller-communication').projectDir = new File(settingsDir, './tutorials/002-controllers/controller-communication')
 
 include ':module-basics'
 project(':module-basics').projectDir = new File(settingsDir, './tutorials/003-module-basics/module-basics')
@@ -43,3 +43,5 @@ project(':google-maps').projectDir = new File(settingsDir, './tutorials/050-goog
 
 include ':infra-examples'
 project(':infra-examples').projectDir = new File(settingsDir, './tutorials/999-advance-stuff/infra-examples')
+
+applyIfExists('tutorials/002-controllers/controller-injections/settings.gradle')

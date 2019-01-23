@@ -14,7 +14,7 @@ public class ModulePack_PLACEHOLDER_CLASS_NAME
 		Module_PLACEHOLDER_CLASS_NAME.class,
 	};
 
-	ModulePack_Basics() {
+	ModulePack_PLACEHOLDER_CLASS_NAME() {
 		super(ModuleClasses);
 	}
 

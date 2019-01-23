@@ -14,7 +14,7 @@ function getGroup() {
 }
 
 addGroup "001" "001-hello-world"
-addGroup "002" "002-controller-communication"
+addGroup "002" "002-controllers"
 addGroup "003" "003-module-basics"
 addGroup "004" "004-module-communication"
 addGroup "005" "005-shared-preferences"

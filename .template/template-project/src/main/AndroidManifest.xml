@@ -1,6 +1,7 @@
 <manifest
     package="PLACEHOLDER_PACKAGE_NAME"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     >
 
     <application

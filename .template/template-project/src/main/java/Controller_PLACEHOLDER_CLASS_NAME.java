@@ -12,7 +12,7 @@ public class Controller_PLACEHOLDER_CLASS_NAME
 	private Module_PLACEHOLDER_CLASS_NAME module;
 
 	public Controller_PLACEHOLDER_CLASS_NAME() {
-		super(R.layout.controller__PLACEHOLDER_RESOURCE_NAME);
+		super(R.layout.controller_PLACEHOLDER_RESOURCE_NAME);
 	}
 }
 
