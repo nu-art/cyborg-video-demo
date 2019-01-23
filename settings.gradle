@@ -44,4 +44,4 @@ project(':google-maps').projectDir = new File(settingsDir, './tutorials/050-goog
 include ':infra-examples'
 project(':infra-examples').projectDir = new File(settingsDir, './tutorials/999-advance-stuff/infra-examples')
 
-applyIfExists('tutorials/002-controllers/controller-injections/settings.gradle')
+applyIfExists('tutorials/002-controllers/injection-example/settings.gradle')
