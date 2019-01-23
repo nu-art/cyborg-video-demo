@@ -1,0 +1,2 @@
+include ':controller-injections'
+project(':controller-injections').projectDir = new File(settingsDir, './tutorials/002-controllers/controller-injections')
