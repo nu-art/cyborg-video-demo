@@ -2,10 +2,6 @@ package PLACEHOLDER_PACKAGE_NAME;
 
 import com.nu.art.modular.core.ModulesPack;
 
-/**
- * Created by TacB0sS on 15-May 2017.
- */
-
 @SuppressWarnings("unchecked")
 public class ModulePack_PLACEHOLDER_CLASS_NAME
 	extends ModulesPack {
