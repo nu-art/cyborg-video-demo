@@ -1,0 +1,5 @@
+applyAndroidApplication("com.nu.art.cyborg.tutorial.actionBar", "action-bar")
+
+dependencies {
+    implementation(resolveDependency('cyborg-core', 'com.nu-art-software.cyborg', "${NU_ART_VERSION}"))
+}

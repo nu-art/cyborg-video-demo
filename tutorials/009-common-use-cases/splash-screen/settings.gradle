@@ -1,0 +1,2 @@
+include ':splash-screen'
+project(':splash-screen').projectDir = new File(settingsDir, './tutorials/009-common-use-cases/splash-screen')
