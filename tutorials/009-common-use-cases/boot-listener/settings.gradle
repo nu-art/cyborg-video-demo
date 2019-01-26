@@ -1,0 +1,2 @@
+include ':boot-listener'
+project(':boot-listener').projectDir = new File(settingsDir, './tutorials/009-common-use-cases/boot-listener')
