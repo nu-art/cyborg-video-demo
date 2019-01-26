@@ -12,7 +12,6 @@ public class Application_SplashScreen
 	@SuppressWarnings("unchecked")
 	public void onCreate() {
 		super.onCreate();
-		// Providing the first layout to preset once the application launches.
-		CyborgBuilder.startCyborg(new CyborgConfiguration(this, R.layout.cyborgview__root, ModulePack_SplashScreen.class));
+		CyborgBuilder.startCyborg(new CyborgConfiguration(this, R.layout.cyborgview__root));
 	}
 }

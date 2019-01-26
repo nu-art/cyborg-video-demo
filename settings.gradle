@@ -44,3 +44,4 @@ project(':infra-examples').projectDir = new File(settingsDir, './tutorials/999-a
 applyIfExists('tutorials/002-controllers/injection-example/settings.gradle')
 applyIfExists('tutorials/009-common-use-cases/action-bar/settings.gradle')
 applyIfExists('tutorials/009-common-use-cases/splash-screen/settings.gradle')
+applyIfExists('tutorials/009-common-use-cases/keyboard-state-listener/settings.gradle')
