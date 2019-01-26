@@ -1,0 +1,2 @@
+include ':keyboard-state-listener'
+project(':keyboard-state-listener').projectDir = new File(settingsDir, './tutorials/009-common-use-cases/keyboard-state-listener')
