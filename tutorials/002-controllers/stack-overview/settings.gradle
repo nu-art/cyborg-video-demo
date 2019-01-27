@@ -1,0 +1,2 @@
+include ':stack-overview'
+project(':stack-overview').projectDir = new File(settingsDir, './tutorials/002-controllers/stack-overview')
