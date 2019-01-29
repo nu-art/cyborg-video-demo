@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cyborg="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    >
+
+    <com.nu.art.cyborg.core.CyborgView
+        android:id="@+id/CV_Main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        cyborg:controller="com.nu.art.cyborg.tutorial.drawerView.Controller_Main"
+        />
+
+    <com.nu.art.cyborg.core.CyborgView
+        android:id="@+id/CV_Menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_marginRight="130dp"
+        cyborg:controller="com.nu.art.cyborg.tutorial.drawerView.Controller_Menu"
+        />
+
+</android.support.v4.widget.DrawerLayout>

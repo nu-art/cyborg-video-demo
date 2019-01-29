@@ -25,29 +25,26 @@ public class Controller_KeyboardStateListener
 		viewId = R.id.ET_Input)
 	private EditText input;
 
-	private boolean keyboardState;
-
 	public Controller_KeyboardStateListener() {
 		super(R.layout.controller__keyboard_state_listener);
 	}
 
 	@Override
 	protected void onResume() {
-		hideKeyboard();
+		onKeyboardVisibilityChanged();
 	}
 
 	@Override
 	public void onClick(View v) {
-		if (keyboardState)
+		if (isKeyboardVisible())
 			hideKeyboard();
 		else
 			showKeyboard();
 	}
 
 	@Override
-	public void onVisibilityChanged(boolean visible) {
-		keyboardState = visible;
-		state.setText("keyboard is " + (visible ? "visible" : "gone"));
+	public void onKeyboardVisibilityChanged() {
+		state.setText("keyboard is " + (isKeyboardVisible() ? "visible" : "gone"));
 	}
 }
 

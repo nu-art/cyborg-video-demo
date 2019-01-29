@@ -19,11 +19,11 @@ public class Controller_Keyboard
 	}
 
 	@Override
-	public void onVisibilityChanged(final boolean visible) {
+	public void onKeyboardVisibilityChanged() {
 		toastShort(new StringResourceResolver() {
 			@Override
 			public String getString(Cyborg cyborg) {
-				return "Keyboard " + (visible ? "VISIBLE" : "GONE");
+				return "Keyboard " + (isKeyboardVisible() ? "VISIBLE" : "GONE");
 			}
 		});
 	}
