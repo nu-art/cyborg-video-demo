@@ -1,0 +1,2 @@
+include ':activity-for-result'
+project(':activity-for-result').projectDir = new File(settingsDir, './tutorials/009-common-use-cases/activity-for-result')

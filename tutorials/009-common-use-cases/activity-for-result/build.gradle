@@ -1,0 +1,5 @@
+applyAndroidApplication("com.nu.art.cyborg.tutorial.activityForResult", "activity-for-result")
+
+dependencies {
+    implementation(resolveDependency('cyborg-core', 'com.nu-art-software.cyborg', "${NU_ART_VERSION}"))
+}

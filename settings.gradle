@@ -51,3 +51,4 @@ applyIfExists('tutorials/009-common-use-cases/internet-connectivity/settings.gra
 applyIfExists('tutorials/010-media/video-player/settings.gradle')
 applyIfExists('tutorials/010-media/media-player/settings.gradle')
 applyIfExists('tutorials/007-adapter-based-views/drawer-view/settings.gradle')
+applyIfExists('tutorials/009-common-use-cases/activity-for-result/settings.gradle')
