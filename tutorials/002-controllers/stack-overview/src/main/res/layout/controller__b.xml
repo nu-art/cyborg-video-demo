@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:cyborg="http://schemas.android.com/apk/res-auto"
     >
 
     <TextView
@@ -24,8 +25,6 @@
 
     <com.nu.art.cyborg.core.CyborgView
         android:id="@+id/CV_StackConfig"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:cyborg="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -33,6 +32,5 @@
         cyborg:controller="com.nu.art.cyborg.tutorial.stackOverview.Controller_StackConfig"
         cyborg:tag="stack-config"
         />
-
 
 </RelativeLayout>

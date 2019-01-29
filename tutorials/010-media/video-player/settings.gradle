@@ -1,0 +1,2 @@
+include ':video-player'
+project(':video-player').projectDir = new File(settingsDir, './tutorials/010-media/video-player')

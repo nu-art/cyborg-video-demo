@@ -1,0 +1,2 @@
+include ':internet-connectivity'
+project(':internet-connectivity').projectDir = new File(settingsDir, './tutorials/009-common-use-cases/internet-connectivity')
