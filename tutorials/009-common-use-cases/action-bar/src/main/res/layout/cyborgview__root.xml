@@ -6,5 +6,5 @@
     android:layout_height="match_parent"
 
     cyborg:controller="com.nu.art.cyborg.tutorial.actionBar.Controller_ActionBarRoot"
-    cyborg:tag="_action_bar"
+    cyborg:tag="action-bar"
     />

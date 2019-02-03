@@ -105,11 +105,15 @@ function createFolderStructure() {
     }
 
     function copyFiles() {
-        cp ${BASH_SOURCE%/*}/template-project/src/main/java/* ${sourcesDir}
-        cp -r ${BASH_SOURCE%/*}/template-project/src/main/res/* ${resFolder}
-        cp ${BASH_SOURCE%/*}/template-project/src/main/AndroidManifest.xml ${mainFolder}
-        cp ${BASH_SOURCE%/*}/template-project/.gitignore ${rootFolder}
-        cp ${BASH_SOURCE%/*}/template-project/*.* ${rootFolder}
+        local template=template-project
+        if [[ "${noModule}" ]]; then
+            template=template-project-no-module
+        fi
+        cp "${BASH_SOURCE%/*}/${template}/src/main/java/*" "${sourcesDir}"
+        cp -r "${BASH_SOURCE%/*}/${template}/src/main/res/*" ${resFolder}
+        cp "${BASH_SOURCE%/*}/${template}/src/main/AndroidManifest.xml" ${mainFolder}
+        cp "${BASH_SOURCE%/*}/${template}/.gitignore" ${rootFolder}
+        cp "${BASH_SOURCE%/*}/${template}/*.*" ${rootFolder}
     }
 
     function renamePlaceholders() {
@@ -142,5 +146,3 @@ function createFolderStructure() {
 }
 
 createFolderStructure "tutorials"
-
-#cp -r ./template/template-project

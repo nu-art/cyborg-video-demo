@@ -22,7 +22,7 @@ public class Controller_InjectionExample
 			ViewListener.OnClick,
 			ViewListener.OnLongClick
 		})
-	private View view1;
+	private View[] view1;
 
 	// This one is extracted manually which override the annotation injection
 	@ViewIdentifier(
@@ -34,7 +34,7 @@ public class Controller_InjectionExample
 	private View view4;
 
 	@ViewIdentifier(
-		viewIds = {
+		viewId = {
 			R.id.View2,
 			R.id.View3
 		},

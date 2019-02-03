@@ -30,7 +30,7 @@ public class Controller_HelloWorldStack
 	//									})
 	//	TextView helloWorldTextView;
 
-	@ViewIdentifier(viewIds = {
+	@ViewIdentifier(viewId = {
 		R.id.TV_AddSecondLayer1,
 		R.id.TV_AddSecondLayer2
 	},

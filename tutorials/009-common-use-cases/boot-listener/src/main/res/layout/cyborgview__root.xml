@@ -6,5 +6,5 @@
     android:layout_height="match_parent"
 
     cyborg:controller="com.nu.art.cyborg.tutorial.bootListener.Controller_BootListener"
-    cyborg:tag="_boot_listener"
+    cyborg:tag="boot-listener"
     />
