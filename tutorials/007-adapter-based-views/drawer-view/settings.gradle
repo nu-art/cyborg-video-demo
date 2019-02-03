@@ -1,2 +1,2 @@
 include ':drawer-view'
-project(':drawer-view').projectDir = new File(settingsDir, './tutorials/007-adapter-based-views/drawer-view')
+project(':drawer-view').projectDir = ext.settingsDir

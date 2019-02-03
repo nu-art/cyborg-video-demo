@@ -1,0 +1,2 @@
+include ':infra-examples'
+project(':infra-examples').projectDir = ext.settingsDir

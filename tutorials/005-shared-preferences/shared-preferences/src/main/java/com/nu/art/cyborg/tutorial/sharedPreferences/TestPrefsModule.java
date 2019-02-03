@@ -38,6 +38,7 @@ public class TestPrefsModule
 	@Override
 
 	protected void init() {
+
 		getModule(PreferencesModule.class).dropPreferences("my-new-storage");
 
 		//		string.set(30);

@@ -1,55 +1,43 @@
-apply from: './dev-tools/gradle/utils.gradle'
+apply from: '../dev-tools/gradle/utils.gradle'
+
+if (ext.settingsDir)
+    settingsDir = ext.settingsDir
 
 includeIfExists('cyborg-core')
 
-include ':hello-world'
-project(':hello-world').projectDir = new File(settingsDir, './tutorials/001-hello-world/hello-world')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/001-hello-world/hello-world/settings.gradle')
 
-include ':controller-communication'
-project(':controller-communication').projectDir = new File(settingsDir, './tutorials/002-controllers/controller-communication')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/002-controllers/injection-example/settings.gradle')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/002-controllers/stack-overview/settings.gradle')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/002-controllers/state-loss/settings.gradle')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/002-controllers/controller-communication/settings.gradle')
 
-include ':module-basics'
-project(':module-basics').projectDir = new File(settingsDir, './tutorials/003-module-basics/module-basics')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/003-module-basics/module-basics/settings.gradle')
 
-include ':module-communication'
-project(':module-communication').projectDir = new File(settingsDir, './tutorials/004-module-communication/module-communication')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/004-module-communication/module-communication/settings.gradle')
 
-include ':login-module'
-project(':login-module').projectDir = new File(settingsDir, './tutorials/004-module-communication/login-module')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/004-module-communication/login-module/settings.gradle')
 
-include ':shared-preferences'
-project(':shared-preferences').projectDir = new File(settingsDir, './tutorials/005-shared-preferences/shared-preferences')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/005-shared-preferences/shared-preferences/settings.gradle')
 
-include ':notifications-api'
-project(':notifications-api').projectDir = new File(settingsDir, './tutorials/006-notifications-api/notifications-api')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/006-notifications-api/notifications-api/settings.gradle')
 
-include ':adapter-based-views'
-project(':adapter-based-views').projectDir = new File(settingsDir, './tutorials/007-adapter-based-views/adapter-based-views')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/007-adapter-based-views/drawer-view/settings.gradle')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/007-adapter-based-views/adapter-based-views/settings.gradle')
 
-include ':custom-attributes'
-project(':custom-attributes').projectDir = new File(settingsDir, './tutorials/008-custom-attributes/custom-attributes')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/008-custom-attributes/custom-attributes/settings.gradle')
 
-include ':common-use-cases'
-project(':common-use-cases').projectDir = new File(settingsDir, './tutorials/009-common-use-cases/common-use-cases')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/009-common-use-cases/common-use-cases/settings.gradle')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/009-common-use-cases/disable-default-launcher/settings.gradle')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/009-common-use-cases/action-bar/settings.gradle')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/009-common-use-cases/splash-screen/settings.gradle')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/009-common-use-cases/keyboard-state-listener/settings.gradle')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/009-common-use-cases/boot-listener/settings.gradle')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/009-common-use-cases/internet-connectivity/settings.gradle')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/009-common-use-cases/activity-for-result/settings.gradle')
 
-include ':disable-default-launcher'
-project(':disable-default-launcher').projectDir = new File(settingsDir, './tutorials/009-common-use-cases/disable-default-launcher')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/010-media/video-player/settings.gradle')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/010-media/media-player/settings.gradle')
 
-include ':google-maps'
-project(':google-maps').projectDir = new File(settingsDir, './tutorials/050-google-maps/google-maps')
-
-include ':infra-examples'
-project(':infra-examples').projectDir = new File(settingsDir, './tutorials/999-advance-stuff/infra-examples')
-
-applyIfExists('tutorials/002-controllers/injection-example/settings.gradle')
-applyIfExists('tutorials/009-common-use-cases/action-bar/settings.gradle')
-applyIfExists('tutorials/009-common-use-cases/splash-screen/settings.gradle')
-applyIfExists('tutorials/009-common-use-cases/keyboard-state-listener/settings.gradle')
-applyIfExists('tutorials/009-common-use-cases/boot-listener/settings.gradle')
-applyIfExists('tutorials/002-controllers/stack-overview/settings.gradle')
-applyIfExists('tutorials/009-common-use-cases/internet-connectivity/settings.gradle')
-applyIfExists('tutorials/010-media/video-player/settings.gradle')
-applyIfExists('tutorials/010-media/media-player/settings.gradle')
-applyIfExists('tutorials/007-adapter-based-views/drawer-view/settings.gradle')
-applyIfExists('tutorials/009-common-use-cases/activity-for-result/settings.gradle')
-applyIfExists('tutorials/002-controllers/state-loss/settings.gradle')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/050-google-maps/google-maps/settings.gradle')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/999-advance-stuff/infra-examples/settings.gradle')

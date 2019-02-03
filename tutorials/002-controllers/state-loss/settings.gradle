@@ -1,2 +1,2 @@
 include ':state-loss'
-project(':state-loss').projectDir = new File(settingsDir, './tutorials/002-controllers/state-loss')
+project(':state-loss').projectDir = ext.settingsDir

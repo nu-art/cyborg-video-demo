@@ -1,0 +1,2 @@
+include ':controller-communication'
+project(':controller-communication').projectDir = ext.settingsDir

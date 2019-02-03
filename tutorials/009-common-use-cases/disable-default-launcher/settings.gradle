@@ -1,0 +1,2 @@
+include ':disable-default-launcher'
+project(':disable-default-launcher').projectDir = ext.settingsDir

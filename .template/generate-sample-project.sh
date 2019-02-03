@@ -132,10 +132,10 @@ function createFolderStructure() {
         local gradleRootSettingsFile="${BASH_SOURCE%/*}/../settings.gradle"
         local gradleSettingsFile="${rootFolder}/settings.gradle"
         echo "include ':${tutorialName}'" >> ${gradleSettingsFile}
-        echo "project(':${tutorialName}').projectDir = new File(settingsDir, './${rootFolder}')" >> ${gradleSettingsFile}
+        echo "project(':${tutorialName}').projectDir = ext.settingsDir" >> ${gradleSettingsFile}
 
         if [[ ! `cat ${gradleRootSettingsFile} | grep "${gradleSettingsFile}"` ]]; then
-            echo "applyIfExists('${gradleSettingsFile}')" >> ${gradleRootSettingsFile}
+            echo "applyNestedSettingsIfExists('${gradleSettingsFile}')" >> ${gradleRootSettingsFile}
         fi
     }
 

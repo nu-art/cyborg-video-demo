@@ -1,0 +1,2 @@
+include ':custom-attributes'
+project(':custom-attributes').projectDir = ext.settingsDir

@@ -1,0 +1,2 @@
+include ':shared-preferences'
+project(':shared-preferences').projectDir = ext.settingsDir

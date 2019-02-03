@@ -1,2 +1,2 @@
 include ':injection-example'
-project(':injection-example').projectDir = new File(settingsDir, './tutorials/002-controllers/injection-example')
+project(':injection-example').projectDir = ext.settingsDir

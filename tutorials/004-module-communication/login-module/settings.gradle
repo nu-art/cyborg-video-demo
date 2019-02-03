@@ -1,0 +1,2 @@
+include ':login-module'
+project(':login-module').projectDir = ext.settingsDir

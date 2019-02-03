@@ -1,2 +1,2 @@
 include ':action-bar'
-project(':action-bar').projectDir = new File(settingsDir, './tutorials/009-common-use-cases/action-bar')
+project(':action-bar').projectDir = ext.settingsDir

@@ -1,0 +1,2 @@
+include ':adapter-based-views'
+project(':adapter-based-views').projectDir = ext.settingsDir

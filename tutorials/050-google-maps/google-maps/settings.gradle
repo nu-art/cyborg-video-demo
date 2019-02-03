@@ -1,0 +1,2 @@
+include ':google-maps'
+project(':google-maps').projectDir = ext.settingsDir

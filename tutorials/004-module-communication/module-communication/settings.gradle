@@ -1,0 +1,2 @@
+include ':module-communication'
+project(':module-communication').projectDir = ext.settingsDir

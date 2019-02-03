@@ -1,0 +1,2 @@
+include ':common-use-cases'
+project(':common-use-cases').projectDir = ext.settingsDir

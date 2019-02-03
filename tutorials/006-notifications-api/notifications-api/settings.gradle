@@ -1,0 +1,2 @@
+include ':notifications-api'
+project(':notifications-api').projectDir = ext.settingsDir
