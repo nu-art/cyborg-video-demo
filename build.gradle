@@ -20,11 +20,15 @@ allprojects {
     }
 }
 
+def pathToVersionFile = rootProject.projectDir.getAbsolutePath() + "/" + pathToVersionFile
+def devToolsPath = rootProject.projectDir.getAbsolutePath() + "/dev-tools/gradle"
+apply from: devToolsPath + '/version-bump-tasks.gradle'
+
 subprojects {
-    def path = rootProject.projectDir.getAbsolutePath()
-    apply from: path + '/dev-tools/gradle/common-cyborg.gradle'
-    apply from: path + '/dev-tools/gradle/version-bump.gradle'
-    apply from: path + '/dev-tools/gradle/utils.gradle'
+    project.pathToVersionFile = pathToVersionFile
+    apply from: devToolsPath + '/common-cyborg.gradle'
+    apply from: devToolsPath + '/version-bump.gradle'
+    apply from: devToolsPath + '/utils.gradle'
 }
 
 task clean(type: Delete) {

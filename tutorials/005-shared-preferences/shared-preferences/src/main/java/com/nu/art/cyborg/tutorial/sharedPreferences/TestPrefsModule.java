@@ -39,7 +39,7 @@ public class TestPrefsModule
 
 	protected void init() {
 
-		getModule(PreferencesModule.class).dropPreferences("my-new-storage");
+		getModule(PreferencesModule.class).getStorage("my-new-storage").clear();
 
 		//		string.set(30);
 	}

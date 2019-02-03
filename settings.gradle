@@ -1,6 +1,9 @@
-apply from: '../dev-tools/gradle/utils.gradle'
+if (!ext.hasProperty("devTools"))
+    ext.devTools = "./dev-tools"
 
-if (ext.settingsDir)
+apply from: ext.devTools + '/gradle/utils.gradle'
+
+if (ext.hasProperty("settingsDir"))
     settingsDir = ext.settingsDir
 
 includeIfExists('cyborg-core')
