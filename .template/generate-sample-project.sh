@@ -109,11 +109,11 @@ function createFolderStructure() {
         if [[ "${noModule}" ]]; then
             template=template-project-no-module
         fi
-        cp "${BASH_SOURCE%/*}/${template}/src/main/java/*" "${sourcesDir}"
-        cp -r "${BASH_SOURCE%/*}/${template}/src/main/res/*" ${resFolder}
-        cp "${BASH_SOURCE%/*}/${template}/src/main/AndroidManifest.xml" ${mainFolder}
-        cp "${BASH_SOURCE%/*}/${template}/.gitignore" ${rootFolder}
-        cp "${BASH_SOURCE%/*}/${template}/*.*" ${rootFolder}
+        cp ${BASH_SOURCE%/*}/${template}/src/main/java/* "${sourcesDir}"
+        cp -r ${BASH_SOURCE%/*}/${template}/src/main/res/* ${resFolder}
+        cp ${BASH_SOURCE%/*}/${template}/src/main/AndroidManifest.xml ${mainFolder}
+        cp ${BASH_SOURCE%/*}/${template}/.gitignore ${rootFolder}
+        cp ${BASH_SOURCE%/*}/${template}/*.* ${rootFolder}
     }
 
     function renamePlaceholders() {
@@ -135,7 +135,7 @@ function createFolderStructure() {
         echo "project(':${tutorialName}').projectDir = ext.settingsDir" >> ${gradleSettingsFile}
 
         if [[ ! `cat ${gradleRootSettingsFile} | grep "${gradleSettingsFile}"` ]]; then
-            echo "applyNestedSettingsIfExists('${gradleSettingsFile}')" >> ${gradleRootSettingsFile}
+            echo "applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/${gradleSettingsFile}')" >> ${gradleRootSettingsFile}
         fi
     }
 
