@@ -13,6 +13,7 @@ public class Application_StateLoss
 	public void onCreate() {
 		super.onCreate();
 		// Providing the first layout to preset once the application launches.
+//		StateDebugFlag.enable();
 		CyborgBuilder.startCyborg(new CyborgConfiguration(this, R.layout.cyborgview__root));
 	}
 }

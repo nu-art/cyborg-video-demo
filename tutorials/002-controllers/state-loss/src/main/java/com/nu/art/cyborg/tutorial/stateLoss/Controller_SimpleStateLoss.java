@@ -15,12 +15,16 @@ public class Controller_SimpleStateLoss
 	extends CyborgController {
 
 	@ViewIdentifier(
-		viewId = R.id.TV_State,
+		viewId = R.id.TV_Generate,
 		listeners = {
 			ViewListener.OnClick,
 			ViewListener.OnLongClick
 		})
 	private TextView state;
+
+	@ViewIdentifier(
+		viewId = R.id.TV_Data)
+	private TextView data;
 
 	@Restorable
 	private String stringToRestore;
@@ -37,6 +41,11 @@ public class Controller_SimpleStateLoss
 		stringToRestore = UUID.randomUUID().toString();
 		intToRestore = CyborgModule.getNextRandomPositiveShort();
 		printState("onClick");
+		updateUI();
+	}
+
+	private void updateUI() {
+		data.setText("" + stringToRestore + " - " + intToRestore);
 	}
 
 	@Override
@@ -44,6 +53,7 @@ public class Controller_SimpleStateLoss
 		stringToRestore = null;
 		intToRestore = 0;
 		printState("onLongClick");
+		updateUI();
 		return false;
 	}
 
@@ -60,6 +70,7 @@ public class Controller_SimpleStateLoss
 	@Override
 	protected void onResume() {
 		printState("onResume");
+		updateUI();
 	}
 
 	@Override

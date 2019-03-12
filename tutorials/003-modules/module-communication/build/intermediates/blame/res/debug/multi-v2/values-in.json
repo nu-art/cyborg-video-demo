@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/module-communication/build/intermediates/incremental/mergeDebugResources/merged.dir/values-in/values-in.xml",
+            "map": [
+                {
+                    "source": "/Users/tacb0ss/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/d352028e88d7bce3811d75fecc28793c/res/values-in/values-in.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

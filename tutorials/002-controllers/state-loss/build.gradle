@@ -1,4 +1,4 @@
-applyAndroidApplication("com.nu.art.cyborg.tutorial.stateLoss", "state-loss")
+applyAndroidApplication("com.nu.art.cyborg.tutorial.stateLoss", "002-state-loss")
 
 dependencies {
     implementation(resolveDependency('cyborg-core', 'com.nu-art-software.cyborg', "${NU_ART_VERSION}"))

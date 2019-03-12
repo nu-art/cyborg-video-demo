@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/module-communication/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xxhdpi-v4/values-xxhdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-core/build/intermediates/packaged_res/debug/values-xxhdpi-v4/values-xxhdpi-v4.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,112",
+                        "endColumns": "56,55",
+                        "endOffsets": "107,163"
+                    }
+                }
+            ]
+        }
+    ]
+}

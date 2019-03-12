@@ -1,0 +1,33 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml:1:1-4:12
+INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml:1:1-4:12
+INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml:1:1-4:12
+INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml:1:1-4:12
+INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml:1:1-4:12
+	package
+		ADDED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml:1:11-51
+		INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml
+		INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml
+		ADDED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml:1:1-4:12
+		INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml:1:1-4:12
+application
+ADDED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml:3:5-19
+uses-sdk
+INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml
+INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml
+INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml
+INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml
+		ADDED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml
+		INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml
+		ADDED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml
+		INJECTED from /Users/tacb0ss/dev/nu-art/cyborg-dev-project/cyborg-video-demo/tutorials/003-modules/login-module/src/main/AndroidManifest.xml

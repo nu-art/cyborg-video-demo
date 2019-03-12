@@ -1,5 +1,6 @@
 applyAndroidApplication("com.nu.art.cyborg.tutorial_050.googleMaps", "google-maps")
 
 dependencies {
+    implementation(resolveDependency('cyborg-core', 'com.nu-art-software.cyborg', "${NU_ART_VERSION}"))
     implementation(resolveDependency('cyborg-maps', 'com.nu-art-software.cyborg', "${NU_ART_VERSION}"))
 }

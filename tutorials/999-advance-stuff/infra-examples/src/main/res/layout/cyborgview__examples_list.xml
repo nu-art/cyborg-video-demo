@@ -13,7 +13,6 @@
     cyborg:rootController="com.nu.art.cyborg.tutorial.infraExample.Controller_Examples"
 
     cyborg:rootTag="HelloWorld"
-    cyborg:transition="Fade"
 
     cyborg:transitionDuration="400"
     />

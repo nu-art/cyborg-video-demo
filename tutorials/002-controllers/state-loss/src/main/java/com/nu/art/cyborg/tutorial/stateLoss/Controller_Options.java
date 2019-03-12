@@ -15,9 +15,9 @@ public class Controller_Options
 	extends CyborgController {
 
 	@ViewIdentifier(
-		viewId = R.id.TV_Option1,
+		viewId = {R.id.TV_Option1},
 		listeners = ViewListener.OnClick)
-	private TextView[] option1;
+	private TextView[] options;
 
 	public Controller_Options() {
 		super(R.layout.controller__options);
@@ -27,6 +27,7 @@ public class Controller_Options
 	public void onClick(View v) {
 		switch (v.getId()) {
 			case R.id.TV_Option1:
+				createLayerBuilder().setControllerType(Controller_SimpleStateLoss.class).build();
 				break;
 		}
 	}
