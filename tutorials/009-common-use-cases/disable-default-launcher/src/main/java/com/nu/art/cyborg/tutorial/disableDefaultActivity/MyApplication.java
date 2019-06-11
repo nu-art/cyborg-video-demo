@@ -13,7 +13,6 @@ public class MyApplication
 	@SuppressWarnings("unchecked")
 	public void onCreate() {
 		super.onCreate();
-		LaunchConfiguration launchConfig = new LaunchConfiguration(-1, "", MyActivity.class);
-		CyborgBuilder.startCyborg(new CyborgConfiguration(this, launchConfig));
+		CyborgBuilder.startCyborg(new CyborgConfiguration(this).setLaunchConfiguration(MyActivity.class));
 	}
 }

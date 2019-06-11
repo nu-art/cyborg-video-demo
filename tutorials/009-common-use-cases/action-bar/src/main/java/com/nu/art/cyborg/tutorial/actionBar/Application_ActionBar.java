@@ -13,6 +13,6 @@ public class Application_ActionBar
 	public void onCreate() {
 		super.onCreate();
 		// Providing the first layout to preset once the application launches.
-		CyborgBuilder.startCyborg(new CyborgConfiguration(this, R.layout.cyborgview__root, ModulePack_ActionBar.class));
+		CyborgBuilder.startCyborg(new CyborgConfiguration(this).setLaunchConfiguration(R.layout.cyborgview__root).setModulesPacks(ModulePack_ActionBar.class));
 	}
 }

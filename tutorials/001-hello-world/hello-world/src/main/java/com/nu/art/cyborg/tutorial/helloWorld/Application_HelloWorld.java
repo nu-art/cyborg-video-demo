@@ -13,6 +13,6 @@ public class Application_HelloWorld
 	public void onCreate() {
 		super.onCreate();
 		// Providing the first layout to present once the application launches.
-		CyborgBuilder.startCyborg(new CyborgConfiguration(this, R.layout.cyborgview__hello_world_stack));
+		CyborgBuilder.startCyborg(new CyborgConfiguration(this).setLaunchConfiguration(R.layout.cyborgview__hello_world_stack));
 	}
 }

@@ -13,6 +13,6 @@ public class Application_PLACEHOLDER_CLASS_NAME
 	public void onCreate() {
 		super.onCreate();
 		// Providing the first layout to preset once the application launches.
-		CyborgBuilder.startCyborg(new CyborgConfiguration(this, R.layout.cyborgview__root, ModulePack_PLACEHOLDER_CLASS_NAME.class));
+		CyborgBuilder.startCyborg(new CyborgConfiguration(this).setLaunchConfiguration(R.layout.cyborgview__root).setModulesPacks(ModulePack_PLACEHOLDER_CLASS_NAME.class));
 	}
 }

@@ -12,6 +12,6 @@ public class Application_CustomAttributes
 	@SuppressWarnings("unchecked")
 	public void onCreate() {
 		super.onCreate();
-		CyborgBuilder.startCyborg(new CyborgConfiguration(this, R.layout.layout__custom_attributes, ModulePack.class));
+		CyborgBuilder.startCyborg(new CyborgConfiguration(this).setLaunchConfiguration(R.layout.layout__custom_attributes).setModulesPacks(ModulePack.class));
 	}
 }

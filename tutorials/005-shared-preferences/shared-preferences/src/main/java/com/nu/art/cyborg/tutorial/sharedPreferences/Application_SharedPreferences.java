@@ -12,6 +12,6 @@ public class Application_SharedPreferences
 	@SuppressWarnings("unchecked")
 	public void onCreate() {
 		super.onCreate();
-		CyborgBuilder.startCyborg(new CyborgConfiguration(this, R.layout.cyborgview__preferences, BasicModulePack.class));
+		CyborgBuilder.startCyborg(new CyborgConfiguration(this).setLaunchConfiguration(R.layout.cyborgview__preferences).setModulesPacks(BasicModulePack.class));
 	}
 }

@@ -12,6 +12,6 @@ public class Application_ControllerCommunicate
 	@SuppressWarnings("unchecked")
 	public void onCreate() {
 		super.onCreate();
-		CyborgBuilder.startCyborg(new CyborgConfiguration(this, R.layout.cyborgview__controller_communication));
+		CyborgBuilder.startCyborg(new CyborgConfiguration(this).setLaunchConfiguration(R.layout.cyborgview__controller_communication));
 	}
 }

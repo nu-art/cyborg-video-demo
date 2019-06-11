@@ -12,6 +12,7 @@ public class Application_NotificationApi
 	@SuppressWarnings("unchecked")
 	public void onCreate() {
 		super.onCreate();
-		CyborgBuilder.startCyborg(new CyborgConfiguration(this, R.layout.cyborgview__notifications_basics, NotificationsModulePack.class));
+		CyborgBuilder.startCyborg(new CyborgConfiguration(this).setLaunchConfiguration(R.layout.cyborgview__notifications_basics)
+		                                                       .setModulesPacks(NotificationsModulePack.class));
 	}
 }
