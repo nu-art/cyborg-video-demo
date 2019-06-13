@@ -31,7 +31,7 @@ public class TestPrefsModule
 
 	private BooleanPreference bool = new BooleanPreference("bool", false).setExpires(DateTimeTools.Minute);
 
-	private CustomPreference<HashMap> mapPref = new CustomPreference<>("pref-custom", new HashMap()).setItemType(HashMap.class);
+	private CustomPreference<HashMap> mapPref = new CustomPreference<>("pref-custom",HashMap.class, new HashMap());
 
 	private EnumPreference<TestEnum> enumPref = new EnumPreference<>("pref-enum", TestEnum.class, TestEnum.DefaultValue).setEnumType(TestEnum.class);
 

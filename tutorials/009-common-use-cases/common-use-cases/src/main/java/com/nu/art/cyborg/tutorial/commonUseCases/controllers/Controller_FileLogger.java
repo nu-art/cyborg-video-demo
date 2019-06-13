@@ -11,8 +11,7 @@ import com.nu.art.belog.loggers.FileLogger;
 import com.nu.art.cyborg.annotations.ViewIdentifier;
 import com.nu.art.cyborg.common.consts.ViewListener;
 import com.nu.art.cyborg.core.CyborgController;
-import com.nu.art.cyborg.core.modules.AndroidLogger;
-import com.nu.art.cyborg.core.modules.AndroidLogger.Config_AndroidLogger;
+import com.nu.art.cyborg.core.loggers.AndroidLogger;
 import com.nu.art.cyborg.modules.PermissionModule;
 import com.nu.art.cyborg.modules.PermissionModule.PermissionResultListener;
 import com.nu.art.cyborg.tutorial.commonUseCases.Module_CommonUseCase;
@@ -45,7 +44,7 @@ public class Controller_FileLogger
 		logDebug("Adding File Logger - this line will NOT be in the file!!");
 
 		File logFolder = new File(Environment.getExternalStorageDirectory() + "/Downloads/cyborg-logs");
-		LogConfig_FileLogger.setFolder(logFolder).setFileName("log-file");
+		LogConfig_FileLogger.setFolder(logFolder.getAbsolutePath()).setFileName("log-file");
 		BeLogged.getInstance().setConfig(AndroidLogger.Config_FastAndroidLogger.merge(Config_FastFileLogger));
 
 		logInfo("Added File Logger - this line will be in the file!!");
