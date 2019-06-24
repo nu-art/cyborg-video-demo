@@ -12,7 +12,7 @@ public class Module_MediaPlayer
 
 	@Override
 	protected void init() {
-		player = instantiateModuleItem(CyborgMediaPlayer.class);
+		player = createModuleItem(CyborgMediaPlayer.class);
 	}
 
 	public CyborgMediaPlayer getPlayer() {
