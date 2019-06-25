@@ -44,6 +44,22 @@ public class Controller_MediaPlayer
 			player.createBuilder()
 			      .setUri("https://www.myinstants.com/media/sounds/goodbadugly-whistle-long.mp3")
 			      .setAutoPlay(true)
+			      .setListener(new MediaPlayerListenerImpl() {
+				      @Override
+				      public void onPrepared() {
+					      renderUI();
+				      }
+
+				      @Override
+				      public void onPaused() {
+					      renderUI();
+				      }
+
+				      @Override
+				      public void onPlaying() {
+					      renderUI();
+				      }
+			      })
 			      .prepare();
 
 		if (player.isState(PlayerState.Preparing))
