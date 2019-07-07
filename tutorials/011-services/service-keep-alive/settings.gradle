@@ -1,0 +1,2 @@
+include ':service-keep-alive'
+project(':service-keep-alive').projectDir = ext.settingsDir

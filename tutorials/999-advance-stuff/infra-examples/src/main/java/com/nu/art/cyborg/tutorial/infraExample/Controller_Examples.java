@@ -70,8 +70,8 @@ public class Controller_Examples
 	}
 
 	@Override
-	public void onRecyclerItemClicked(RecyclerView parentView, View view, int position) {
-		UseCaseExample itemForPosition = resolver.dataModel.getItemForPosition(position);
+	public void onRecyclerItemClicked(Object item, RecyclerView parentView, View view, int position) {
+		UseCaseExample itemForPosition = (UseCaseExample) item;
 		logInfo("clicked: " + itemForPosition);
 		createLayerBuilder().setControllerType(itemForPosition.getControllerType()).build();
 	}
