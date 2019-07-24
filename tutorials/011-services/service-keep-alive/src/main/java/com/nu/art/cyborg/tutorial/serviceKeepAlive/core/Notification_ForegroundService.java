@@ -64,9 +64,13 @@ public class Notification_ForegroundService
 
 		contentView.setOnClickPendingIntent(R.id.IV_Actionable, createPendingIntent(NotificationId, Action_ActionA));
 
+		addActionButton(builder, NotificationId, Action_ActionB, R.drawable.send_icon, "Send");
 		builder.setCustomContentView(contentView);
-		builder.setAutoCancel(false);
+		builder.setCustomBigContentView(contentView);
+		builder.setCustomHeadsUpContentView(contentView);
+
 		builder.setSmallIcon(R.drawable.icon__location);
+		builder.setAutoCancel(false);
 		builder.setOngoing(true);
 		Notification notification = postNotification(builder, NotificationId);
 		cyborg.startForegroundService(Service_KeepAlive.class, NotificationId, notification);

@@ -20,6 +20,6 @@ public class Service_KeepAlive
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
 		super.onStartCommand(intent, flags, startId);
-		return START_NOT_STICKY;
+		return START_STICKY;
 	}
 }

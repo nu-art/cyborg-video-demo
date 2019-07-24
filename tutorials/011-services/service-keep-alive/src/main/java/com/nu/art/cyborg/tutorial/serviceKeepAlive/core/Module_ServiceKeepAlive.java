@@ -17,6 +17,7 @@ import com.nu.art.cyborg.modules.scheduler.TaskScheduler;
 public class Module_ServiceKeepAlive
 	extends CyborgModule
 	implements OnBootCompletedListener {
+
 	private Handler reviveHandler;
 
 	private Module_ServiceKeepAlive() {}
@@ -25,6 +26,7 @@ public class Module_ServiceKeepAlive
 	protected void init() {
 		reviveHandler = getModule(ThreadsModule.class).getDefaultHandler("Revive-Thread");
 		keepAlive();
+		postNotificationAndStartService();
 	}
 
 	final void handleActionB() {
@@ -38,6 +40,10 @@ public class Module_ServiceKeepAlive
 
 	public void postNotificationAndStartService() {
 		getModule(NotificationsModule.class).getNotificationHandler(Notification_ForegroundService.class).post();
+	}
+
+	public void killService() {
+		cyborg.stopService(Service_KeepAlive.class);
 	}
 
 	public void handleNotificationCancel() {
@@ -68,8 +74,8 @@ public class Module_ServiceKeepAlive
 			if (lastIntent != null)
 				taskScheduler.cancel(lastIntent);
 
-			lastIntent = taskScheduler.scheduleTask(ReviveTask.class, null, ReviveTask.TaskId, System.currentTimeMillis() + 20 * DateTimeTools.Second);
-			reviveHandler.postDelayed(this, 15 * DateTimeTools.Second);
+			lastIntent = taskScheduler.scheduleTask(ReviveTask.class, null, ReviveTask.TaskId, System.currentTimeMillis() + 6 * DateTimeTools.Second);
+			reviveHandler.postDelayed(this, 4 * DateTimeTools.Second);
 		}
 	};
 
