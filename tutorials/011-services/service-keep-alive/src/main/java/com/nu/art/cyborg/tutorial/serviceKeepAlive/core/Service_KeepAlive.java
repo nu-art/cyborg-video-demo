@@ -5,7 +5,7 @@ import android.content.Intent;
 import com.nu.art.cyborg.core.CyborgServiceBase;
 
 public class Service_KeepAlive
-		extends CyborgServiceBase {
+	extends CyborgServiceBase {
 
 	@Override
 	protected BaseBinder createBinder() {

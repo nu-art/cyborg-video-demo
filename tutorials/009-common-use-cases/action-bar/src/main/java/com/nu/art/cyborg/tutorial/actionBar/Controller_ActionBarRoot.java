@@ -9,7 +9,6 @@ import com.nu.art.cyborg.core.CyborgController;
 public class Controller_ActionBarRoot
 	extends CyborgController {
 
-
 	public Controller_ActionBarRoot() {
 		super(R.layout.controller__action_bar_root);
 	}

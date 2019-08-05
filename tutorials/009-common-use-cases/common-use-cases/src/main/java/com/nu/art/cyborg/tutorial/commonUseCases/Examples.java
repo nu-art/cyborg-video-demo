@@ -20,7 +20,8 @@ enum Examples
 	RegisterBroadcastReceiver(Controller_BroadcastReceiver.class),
 	StartService(Controller_StartService.class),
 	GetResources(Controller_GetResources.class),
-	Keyboard(Controller_Keyboard.class),;
+	Keyboard(Controller_Keyboard.class),
+	;
 
 	final Class<? extends CyborgController> controllerType;
 

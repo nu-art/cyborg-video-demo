@@ -14,6 +14,7 @@ public class Application_ServiceKeepAlive
 	public void onCreate() {
 		super.onCreate();
 		// Providing the first layout to preset once the application launches.
-		CyborgBuilder.startCyborg(new CyborgConfiguration(this).setLaunchConfiguration(R.layout.cyborgview__root).setModulesPacks(ModulePack_ServiceKeepAlive.class));
+		CyborgBuilder.startCyborg(new CyborgConfiguration(this).setLaunchConfiguration(R.layout.cyborgview__root)
+		                                                       .setModulesPacks(ModulePack_ServiceKeepAlive.class));
 	}
 }
