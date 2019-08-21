@@ -3,13 +3,9 @@ package com.nu.art.cyborg.tutorial.stateLoss;
 import android.view.View;
 import android.widget.TextView;
 
-import com.nu.art.cyborg.annotations.Restorable;
 import com.nu.art.cyborg.annotations.ViewIdentifier;
 import com.nu.art.cyborg.common.consts.ViewListener;
 import com.nu.art.cyborg.core.CyborgController;
-import com.nu.art.cyborg.core.CyborgModule;
-
-import java.util.UUID;
 
 public class Controller_Options
 	extends CyborgController {
@@ -27,7 +23,7 @@ public class Controller_Options
 	public void onClick(View v) {
 		switch (v.getId()) {
 			case R.id.TV_Option1:
-				createLayerBuilder().setControllerType(Controller_SimpleStateLoss.class).build();
+				createLayerBuilder().setControllerType(Controller_SimpleStateLoss.class).push();
 				break;
 		}
 	}

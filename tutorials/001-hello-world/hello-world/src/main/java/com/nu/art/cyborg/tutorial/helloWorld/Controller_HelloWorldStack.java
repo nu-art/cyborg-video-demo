@@ -43,7 +43,7 @@ public class Controller_HelloWorldStack
 	@Override
 	public boolean onLongClick(View v) {
 		CyborgStackController stackController = getControllerById(R.id.Tag_RootStack);
-		stackController.createLayerBuilder().setControllerType(Controller_HelloWorld2.class).setDuration(2000).build();
+		stackController.createLayerBuilder().setControllerType(Controller_HelloWorld2.class).setDuration(2000).push();
 		return true;
 	}
 
@@ -75,6 +75,6 @@ public class Controller_HelloWorldStack
 				                                     .setBackgroundColor(Color.argb(255, UtilsRandom.nextInt(256), UtilsRandom.nextInt(256), UtilsRandom.nextInt(256)));
 			               }
 		               })
-		               .build();
+		               .push();
 	}
 }

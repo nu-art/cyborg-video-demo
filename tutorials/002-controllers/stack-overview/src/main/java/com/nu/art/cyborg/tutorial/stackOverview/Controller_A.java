@@ -27,7 +27,7 @@ public class Controller_A
 		createLayerBuilder().setControllerType(Controller_B.class)
 				.setKeepInStack(stackConfig.isKeepInStack())
 				.setStateTag("Controller_B" + (getStack().getStackLayersTags().length + 1))
-				.build();
+				.push();
 	}
 }
 

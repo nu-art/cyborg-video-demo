@@ -4,12 +4,12 @@
     xmlns:cyborg="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#33ff33aa"
     >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/TV_Open"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
         android:text="We are now in Controller A"

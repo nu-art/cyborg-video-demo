@@ -78,7 +78,7 @@ public class Controller_StackConfig
 
 	@Override
 	public void onClick(View v) {
-		CyborgStackController stack = getStack();
+		final CyborgStackController stack = getStack();
 		switch (v.getId()) {
 			case R.id.CB_KeepInStack:
 				keepInStack = cbkeepInStack.isChecked();
@@ -86,7 +86,12 @@ public class Controller_StackConfig
 
 			case R.id.TV_ClearAll:
 				stack.clear();
-				stack.createLayerBuilder().setControllerType(Controller_A.class).build();
+//				postOnUI(new Runnable() {
+//					@Override
+//					public void run() {
+//						stack.createLayerBuilder().setControllerType(Controller_A.class).push();
+//					}
+//				});
 				break;
 
 			case R.id.TV_ClearToTag:

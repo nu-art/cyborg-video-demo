@@ -33,7 +33,7 @@ public class Controller_SplashScreen
 		shownSplash = true;
 		createLayerBuilder()
 			.setControllerType(Controller_Homepage.class)
-			.build();
+			.push();
 	}
 }
 

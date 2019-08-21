@@ -43,7 +43,7 @@ public class Controller_B
 
 	@Override
 	public void onClick(View v) {
-		createLayerBuilder().setControllerType(Controller_A.class).setKeepInStack(false).build();
+		createLayerBuilder().setControllerType(Controller_A.class).setKeepInStack(false).push();
 	}
 }
 

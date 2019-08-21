@@ -73,7 +73,7 @@ public class Controller_Examples
 	public void onRecyclerItemClicked(Object item, RecyclerView parentView, View view, int position) {
 		UseCaseExample itemForPosition = (UseCaseExample) item;
 		logInfo("clicked: " + itemForPosition);
-		createLayerBuilder().setControllerType(itemForPosition.getControllerType()).build();
+		createLayerBuilder().setControllerType(itemForPosition.getControllerType()).push();
 	}
 
 	@Override
