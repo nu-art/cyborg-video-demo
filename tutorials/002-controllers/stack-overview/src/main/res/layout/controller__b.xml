@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/CB_KeepInStack"
+        android:layout_above="@id/TV_Open"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
         android:text="We are now in Controller B"

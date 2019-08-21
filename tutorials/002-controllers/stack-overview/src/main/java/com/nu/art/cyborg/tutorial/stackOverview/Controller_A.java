@@ -24,7 +24,10 @@ public class Controller_A
 
 	@Override
 	public void onClick(View v) {
-		createLayerBuilder().setControllerType(Controller_B.class).setKeepInStack(stackConfig.isKeepInStack()).build();
+		createLayerBuilder().setControllerType(Controller_B.class)
+				.setKeepInStack(stackConfig.isKeepInStack())
+				.setStateTag("Controller_B" + (getStack().getStackLayersTags().length + 1))
+				.build();
 	}
 }
 
