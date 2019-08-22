@@ -103,7 +103,6 @@ public class Controller_StackConfig
 	@Override
 	public void onItemSelected(Object selectedItem, AdapterView<?> parentView, View selectedView, int position, long id) {
 		tag = (String) selectedItem;
-		super.onItemSelected(selectedItem, parentView, selectedView, position, id);
 	}
 
 	private void setSpinner(Spinner spinner, final Object[] values) {
