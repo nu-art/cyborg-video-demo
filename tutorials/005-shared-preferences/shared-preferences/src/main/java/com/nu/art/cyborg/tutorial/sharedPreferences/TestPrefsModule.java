@@ -1,5 +1,10 @@
 package com.nu.art.cyborg.tutorial.sharedPreferences;
 
+import android.os.Handler;
+import android.support.annotation.NonNull;
+import android.text.TextUtils;
+
+import com.nu.art.core.generics.Processor;
 import com.nu.art.core.tools.DateTimeTools;
 import com.nu.art.cyborg.core.CyborgModule;
 import com.nu.art.storage.BooleanPreference;
@@ -17,6 +22,11 @@ import java.util.HashMap;
 
 public class TestPrefsModule
 	extends CyborgModule {
+    private static final String STORAGE_NAME = "my-new-storage";
+
+    interface TestPrefsModuleListener{
+        void onStringValueChanged(String updatedValue);
+    }
 
 	public enum TestEnum {
 		DefaultValue,
@@ -27,7 +37,7 @@ public class TestPrefsModule
 
 	private IntegerPreference integer = new IntegerPreference("integer", -10);
 
-	private StringPreference string = new StringPreference("string", "we have no value").setStorageGroup("my-new-storage");
+	private StringPreference string = new StringPreference("string", "we have no value").setStorageGroup(STORAGE_NAME);
 
 	private BooleanPreference bool = new BooleanPreference("bool", false).setExpires(DateTimeTools.Minute);
 
@@ -38,10 +48,24 @@ public class TestPrefsModule
 	@Override
 
 	protected void init() {
-
-		getModule(PreferencesModule.class).getStorage("my-new-storage").clear();
-
+		//	    clearStorage();
 		//		string.set(30);
+	}
+
+	public void clearStorage(){
+		getModule(PreferencesModule.class).getStorage(STORAGE_NAME).clear();
+
+		new Handler().postDelayed(new Runnable() {
+			@Override
+			public void run() {
+				dispatchEvent("String Updated", TestPrefsModuleListener.class, new Processor<TestPrefsModuleListener>() {
+					@Override
+					public void process(TestPrefsModuleListener listener) {
+						listener.onStringValueChanged(getString());
+					}
+				});
+			}
+		}, 150);
 	}
 
 	public void addToMap(String key, String value) {
@@ -66,4 +90,21 @@ public class TestPrefsModule
 	public int getInteger() {
 		return this.integer.get();
 	}
+
+    void updateString(final String value) {
+        this.string.set(value);
+
+        dispatchEvent("String Updated", TestPrefsModuleListener.class, new Processor<TestPrefsModuleListener>() {
+            @Override
+            public void process(TestPrefsModuleListener listener) {
+                listener.onStringValueChanged(value);
+            }
+        });
+    }
+
+    @NonNull
+    String getString() {
+        String returnValue = this.string.get();
+        return TextUtils.isEmpty(returnValue) ? "" : returnValue;
+    }
 }
