@@ -86,12 +86,6 @@ public class Controller_StackConfig
 
 			case R.id.TV_ClearAll:
 				stack.clear();
-//				postOnUI(new Runnable() {
-//					@Override
-//					public void run() {
-//						stack.createLayerBuilder().setControllerType(Controller_A.class).push();
-//					}
-//				});
 				break;
 
 			case R.id.TV_ClearToTag:
