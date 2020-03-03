@@ -120,12 +120,12 @@ function createFolderStructure() {
         renameFiles ${rootFolder} ${placeholder_ClassName} ${className}
         renameFiles ${rootFolder} ${placeholder_Resource} ${resourceName}
 
-        renameStringInFiles ${rootFolder} ${placeholder_TutorialName} "${tutorialName}"
-        renameStringInFiles ${rootFolder} ${placeholder_ClassName} "${className}"
-        renameStringInFiles ${rootFolder} ${placeholder_AppName} "${appName}"
-        renameStringInFiles ${rootFolder} ${placeholder_PackageName} "${packageName}"
-        renameStringInFiles ${rootFolder} ${placeholder_Group} "${group}"
-        renameStringInFiles ${rootFolder} ${placeholder_Resource} "${resourceName}"
+        replaceStringInFiles ${rootFolder} ${placeholder_TutorialName} "${tutorialName}"
+        replaceStringInFiles ${rootFolder} ${placeholder_ClassName} "${className}"
+        replaceStringInFiles ${rootFolder} ${placeholder_AppName} "${appName}"
+        replaceStringInFiles ${rootFolder} ${placeholder_PackageName} "${packageName}"
+        replaceStringInFiles ${rootFolder} ${placeholder_Group} "${group}"
+        replaceStringInFiles ${rootFolder} ${placeholder_Resource} "${resourceName}"
     }
 
     function applyToSettings() {
