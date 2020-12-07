@@ -50,3 +50,4 @@ applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/010-medi
 applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/050-google-maps/google-maps/settings.gradle')
 applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/999-advance-stuff/infra-examples/settings.gradle')
 applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/011-services/service-keep-alive/settings.gradle')
+applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/012-network/transceiver/settings.gradle')
