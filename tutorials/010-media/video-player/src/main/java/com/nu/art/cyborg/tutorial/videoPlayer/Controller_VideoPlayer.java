@@ -33,7 +33,8 @@ public class Controller_VideoPlayer
 
 	@Override
 	protected void onCreate() {
-		this.player = module.getPlayer();
+		player = module.getPlayer();
+		videoView.setMediaPlayer(player);
 	}
 
 	@Override
@@ -72,6 +73,18 @@ public class Controller_VideoPlayer
 			player.pause();
 		else
 			player.play();
+	}
+
+	@Override
+	protected void onPause() {
+		if (player.isPlaying())
+			player.pause();
+	}
+
+	@Override
+	protected void onDestroy() {
+		if (player.isAlive())
+			player.dispose();
 	}
 }
 
