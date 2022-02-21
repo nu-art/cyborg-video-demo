@@ -46,7 +46,7 @@ public class Controller_VideoPlayer
 	public void onClick(View v) {
 		if (player.isState(PlayerState.Idle))
 			player.createBuilder()
-			      .setUri("https://www.myinstants.com/media/sounds/goodbadugly-whistle-long.mp3")
+			      .setUri("https://videodelivery.net/cdd7ed2cd8fea23ef99545624f5c2e2a/manifest/video.m3u8")
 			      .setAutoPlay(true)
 			      .setListener(new MediaPlayerListenerImpl() {
 				      @Override
