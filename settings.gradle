@@ -11,7 +11,7 @@ try {
 } catch (e) {
 }
 
-includeIfExists('cyborg-core')
+includeIfExists('cyborg-x')
 
 applyNestedSettingsIfExists(settingsDir.getAbsolutePath() + '/tutorials/001-hello-world/hello-world/settings.gradle')
 

@@ -1,5 +1,5 @@
 applyAndroidApplication("com.nu.art.cyborg.tutorial_005.sharedPreferences", "shared-preferences")
 
 dependencies {
-    implementation(resolveDependency('cyborg-core', 'com.nu-art-software.cyborg', "${NU_ART_VERSION}"))
+    implementation(resolveDependency('cyborg-x', 'com.nu-art-software.cyborg', "${NU_ART_VERSION}"))
 }
