@@ -1,8 +1,8 @@
 package com.nu.art.cyborg.tutorial.serviceKeepAlive.core;
 
 import android.app.Notification;
+import android.app.Notification.Builder;
 import android.os.Bundle;
-import android.support.v4.app.NotificationCompat.Builder;
 import android.widget.RemoteViews;
 
 import com.nu.art.core.generics.Processor;
